@@ -1,5 +1,5 @@
 export default function Testimonies(){
     return <div>
-        Testimonies
+         Testimoies of user
     </div>
 }
