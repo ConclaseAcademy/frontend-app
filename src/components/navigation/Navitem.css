@@ -1,0 +1,13 @@
+.navitem-container{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    column-gap: 8px;
+}
+
+.navitem-container li{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}

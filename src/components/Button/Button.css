@@ -1,0 +1,11 @@
+.btn-container{
+    border-radius: 50px;
+    border: 2px solid #fff;
+    Padding: 16px 24px;
+    /* width: 169px; */
+    /* height: 56px; */
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}

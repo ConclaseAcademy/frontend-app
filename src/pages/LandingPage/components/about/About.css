@@ -1,0 +1,28 @@
+.about-container{
+    display: flex;
+    flex-direction: row;
+    padding: 110px 60px;
+    padding-bottom: 0px;
+}
+
+.about-container h3{
+    font-weight: 600;
+    font-size: 40px;
+    color:#080D17;
+    margin-bottom: 16px;
+}
+
+.about-container p{
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 48px;
+}
+
+.about-container .about-text{
+    padding: 93.5px 39px;
+    padding-right: 0px;
+}
+
+.about-container div img{
+    height:487px;
+}

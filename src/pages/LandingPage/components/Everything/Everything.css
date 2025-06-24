@@ -1,0 +1,16 @@
+.everything-container{
+    padding: 100px 85px;
+    text-align: center;
+    background: #EEF0F74F;
+
+}
+
+.everything-container h2{
+    margin-bottom: 51px;
+}
+
+.everything-container div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}

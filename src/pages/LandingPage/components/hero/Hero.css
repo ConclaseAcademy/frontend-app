@@ -1,0 +1,11 @@
+.hero-container{
+    background-image: url('../../../../../public/images/Hero_JPG.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1002px;
+    padding-top: 47px;
+    padding-left: 58px;
+    padding-right: 58px; 
+    position: relative;
+}
