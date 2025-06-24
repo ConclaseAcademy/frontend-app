@@ -1,4 +1,4 @@
-import "./NavItem.css";
+import "./Navitem.css";
 
 export default function NavItem(){
     return <ul className="navitem-container">
