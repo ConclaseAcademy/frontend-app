@@ -4,7 +4,7 @@ import CTA from './components/CTA/CTA';
 import Everything from './components/Everything/Everything';
 import Hero from './components/hero/Hero';
 import HowItWorks from './components/HowItWorks/HowItWorks';
-import Testimonies from './components/testimonies/Testimonies';
+import Testimonies from './components/Testimonies/Testimonies';
 
 export default function LandingPage() {
 
