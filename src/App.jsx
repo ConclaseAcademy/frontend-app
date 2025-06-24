@@ -11,6 +11,7 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
+      
 
       {/* You can comment out if it is hinder  */}
       <div style={{position:'fixed', bottom:'20px', left:'10px', display:'flex', gap:'20px'}}>
