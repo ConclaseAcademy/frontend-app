@@ -2,6 +2,7 @@ import { Routes, Route, NavLink } from 'react-router';
 import LandingPage from './pages/LandingPage/LandingPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
       
 
@@ -17,6 +19,7 @@ function App() {
       <div style={{position:'fixed', bottom:'20px', left:'10px', display:'flex', gap:'20px'}}>
         <NavLink to="/signin">Sign In Page</NavLink>
         <NavLink to="/signup">Sign Up Page</NavLink>
+        <NavLink to="/dashboard">Dashboard Page</NavLink>
       </div>
     </>
   );

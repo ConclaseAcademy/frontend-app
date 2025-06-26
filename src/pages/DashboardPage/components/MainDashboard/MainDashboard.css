@@ -1,0 +1,13 @@
+.maindashboard-container{
+    
+    padding-left: 56px;
+    padding-top: 59px;
+    flex-grow: 1;
+    padding-right: 98px;
+}
+
+.maindashboard-status{
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+}

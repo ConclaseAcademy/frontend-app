@@ -1,0 +1,13 @@
+.maindashboardcard-container{
+    background-color: #ffff;
+    flex-grow: 1;
+    color: #808080;
+border-radius: 16px;
+padding: 16px;
+gap: 4px;
+
+}
+
+.maindashboardcard-container div p{
+    color: #080D17;
+}

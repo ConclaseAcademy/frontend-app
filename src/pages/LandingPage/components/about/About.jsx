@@ -1,6 +1,6 @@
 import Button from "../../../../components/Button/Button";
 import "./About.css";
-import AboutImgSrc from "../../../../assets/images/about.svg"
+import AboutImgSrc from "./asset/about.svg"
 
 export default function About(){
     return <div className="about-container">

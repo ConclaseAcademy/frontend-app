@@ -1,9 +1,9 @@
-import YogaImgSrc from "../../../../assets/images/Yoga.svg";
-import ChartImgSrc from "../../../../assets/images/Chart.svg";
-import DirectHitImgSrc from "../../../../assets/images/DirectHit.svg";
-import GreenBookImgSrc from "../../../../assets/images/GreenBook.svg";
-import SmilingEyesImgSrc from "../../../../assets/images/SmilingEyes.svg";
-import SpeechBalloonImgSrc from "../../../../assets/images/SpeechBalloon.svg";
+import YogaImgSrc from "./assets/Yoga.svg";
+import ChartImgSrc from "./assets/Chart.svg";
+import DirectHitImgSrc from "./assets/DirectHit.svg";
+import GreenBookImgSrc from "./assets/GreenBook.svg";
+import SmilingEyesImgSrc from "./assets/SmilingEyes.svg";
+import SpeechBalloonImgSrc from "./assets/SpeechBalloon.svg";
 
 export default function EverythingIcon({heading}){
     switch(heading){

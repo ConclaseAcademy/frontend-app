@@ -1,0 +1,20 @@
+.dashboardnavigation-container{
+    /* width: 1440;
+height: 88; */
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    background: #0D2555;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboardnaviagtion-navitem{
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    list-style-type: none;
+    color: white;
+}
