@@ -16,11 +16,11 @@ function App() {
       
 
       {/* You can comment out if it is hinder  */}
-      <div style={{position:'fixed', bottom:'20px', left:'10px', display:'flex', gap:'20px'}}>
+      {/* <div style={{position:'fixed', bottom:'20px', left:'10px', display:'flex', gap:'20px'}}>
         <NavLink to="/signin">Sign In Page</NavLink>
         <NavLink to="/signup">Sign Up Page</NavLink>
         <NavLink to="/dashboard">Dashboard Page</NavLink>
-      </div>
+      </div> */}
     </>
   );
 }

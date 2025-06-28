@@ -1,5 +1,6 @@
 .everything-container{
-    padding: 100px 85px;
+    /* padding: 100px 85px; */
+    padding: 100px 6%;
     text-align: center;
     background: #EEF0F74F;
 
@@ -13,4 +14,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
+}
+
+/* adding media queries */
+@media (max-width:900px){
+    .everything-container div{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:600px){
+    .everything-container div{
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,0 +1,157 @@
+.signuppage-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #FFF8F8E5;
+    padding: 1.5%;
+    /* padding: 20px; */
+    /* height: 100vh; */
+}
+
+.signuppage-left{
+    background: #080D171A;
+    padding-left: 13%;
+    padding-top: 5%;
+}
+
+.signuppage-logo{
+    margin-left:-5%;
+    /* margin-left:-50px; */
+    margin-bottom:13%;
+}
+
+.signuppage-card-1{
+    padding-right: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signuppage-left .signuppage-card-1 h3{
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    color: #080D17;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.signuppage-left .signuppage-card-1 > p{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #080D1780;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 4px;
+    margin-bottom: 7px;
+}
+
+.signuppage-left form{
+    display: flex;
+    flex-direction: column;
+    padding-right: 37%;
+}
+
+.signuppage-right{
+    background: #080D171A;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-top: 72px;
+    padding-bottom: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* background-color: red; */
+    padding-left: 10%;
+}
+
+.signuppage-right-content{
+    /* background:green; */
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.signuppage-right-content h3{
+    position: absolute;
+    bottom: 30%;
+    /* bottom: 205px; */
+    right: 0px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color:#FFFFFF;
+    /* background-color: blue; */
+}
+
+.signuppage-right-content img{
+    width:100%;
+    /* width:600px; */
+    /* height:870px; */
+    height: 100%;
+}
+
+/* using the media queries */
+
+@media (max-width:400px) {
+
+    .signuppage-right-content h3{
+        bottom: 15%;
+    }
+    
+}
+
+@media (max-width:800px) {
+    .signuppage-container{
+        grid-template-columns: 1fr;
+    }
+
+    .signuppage-right{
+        margin-top: 20px;
+    }
+/* 
+    .signuppage-right-content{
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+    } */
+
+    /* .signuppage-right-content h3{
+        bottom: 0px;
+    } */
+
+}
+
+@media (max-width:1200px) {
+
+    .signuppage-left {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .signuppage-logo{
+        margin-bottom:5%;
+    }
+
+    .signuppage-card-1 {
+        padding: 2%;
+    }
+
+    .signuppage-left form{
+        padding:2%;
+    }
+
+    .signuppage-right{
+        padding: 2%;
+    }
+
+    .signuppage-right-content{
+        justify-content: center;
+        flex-grow: 1;
+    }
+    
+
+}

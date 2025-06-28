@@ -1,0 +1,26 @@
+.testimonies-container{
+    background: #DDDECC;
+    padding: 30px 95px 92px 95px;
+}
+
+.testimonies-container h3{
+    font-size: 32px;
+    font-weight: 600;
+    color: #0B071E;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.testimonies-container p{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 69px;
+    text-align: center;
+
+}
+
+.testimonies-map{
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+}

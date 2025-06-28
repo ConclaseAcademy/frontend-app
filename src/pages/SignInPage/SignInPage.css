@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("./../public/fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+.signinpage-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr; */
+    grid-auto-rows: 1fr;
+    /* height: 100vh; */
+    /* padding: 61px; */
+    padding: 5%;
+}
+
+.signinpage-right{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: #1A3467;
+    color: #ffff;
+    position: relative;
+}
+
+.signinpage-card-1{
+    margin-top: 231px;
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+
+}
+
+.signinpage-card-1 h3{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+
+}
+
+.signinpage-card-1 p{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    font-size: 24px;
+
+}
+
+.signinpage-card-2{
+    /* position: absolute;
+    right: 10%;
+    bottom: 10%; */
+    text-align: right;
+    /* margin-top: 286px; */
+    z-index:100 ;
+    /* margin-right: 10%; */
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+
+.signinpage-right img{
+    position: absolute;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.signinpage-left{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: #080D1726;
+    padding-top: 57px;
+    padding-left: 10%;
+    /* padding-left: 47px; */
+    /* padding-right: 221px; */
+    padding-right: 33%;
+    height: auto;
+}
+
+.signinpage-left form{
+    display: flex;
+    flex-direction: column;
+}
+
+.signinpage-left h3{
+    margin-top: 61px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #080D17;
+    margin-bottom: 10px;
+    font-family: "Poppins Bold";
+}
+
+.signinpage-left > p{
+font-weight: 500;
+font-size: 16px;
+color: #080D1799;
+
+
+}
+
+/* using the media queries */
+@media (max-width:800px) {
+    .signinpage-container{
+        grid-template-columns: 1fr;
+    }
+
+    .signinpage-right{
+        border-radius: 50px;
+    }
+
+    .signinpage-left{
+        border-radius: 50px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width:1200px) {
+
+    /* .signinpage-right{
+    } */
+
+    .signinpage-left{
+        padding:10%;
+
+    }
+
+}
