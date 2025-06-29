@@ -29,8 +29,8 @@ export default function SignInPage() {
   const S = {
     page:    { display: 'flex', minHeight: '100vh', fontFamily: 'sans-serif' },
     left:    { flex: 1, padding: '3rem', background: '#D4D6D9', borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center' },
-    right:   { flex: 1, padding: '3rem', background: '#1B355E', color: '#fff', borderTopRightRadius: '20px', borderBottomRightRadius: '20px', position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'center' },
-    logo:    { display: 'flex', alignItems: 'center', marginBottom: '2rem', fontSize: '1.25rem', fontWeight: 600, color: '#F3F0E2' },
+    right:   { flex: 1, padding: '3rem', background: '#1A3467', color: '#fff', borderTopRightRadius: '20px', borderBottomRightRadius: '20px', position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'center' },
+    logo:    { display: 'flex', alignItems: 'center', marginBottom: '2rem', fontSize: '1.25rem', fontWeight: 600, color: '#FFFFE3'},
     hero:    { fontSize: '2.5rem', fontWeight: '700', margin: 0 },
     sub:     { margin: '1rem 0 2rem 0', color: '#555' },
     group:   { marginBottom: '1rem' },
@@ -43,12 +43,21 @@ export default function SignInPage() {
     imgBg:   { position: 'absolute', inset: 0, margin: 'auto', width: '75%', opacity: 0.1 },
     quote:   { position: 'absolute', bottom: '1rem', right: '1rem', fontStyle: 'italic', fontSize: '0.85rem' },
     error:   { color: 'crimson', fontSize: '0.8rem', marginTop: '0.25rem' },
+    welcomeContent: { textAlign: 'center', zIndex: 1},
+    welcomeTitle: { fontSize: '2.5rem', lineHeight: '1.2', marginBottom: '1rem', fontWeight: 'bold', color: '#fff'},
+    welcomeSub: { fontSize: '1.2rem', fontWeight: '300', maxWidth: '80%', margin: '0 auto', color: '#f0f0f0'},
+    logoImage: { width: '150px', height: 'auto', marginBottom: '2rem' },
   }
 
   return (
     <div style={S.page}>
       <div style={S.left} className="sign-in-container">
-        <h1 style={S.logo}      className="hero-title">MindfulSpace</h1>
+      <img
+  src={logoUrl}
+  alt="MindfulSpace logo"
+  style={S.logoImage}
+  className="brand-logo"
+/>
         <h2 style={S.hero}      className="hero-title">Welcome Back!</h2>
         <p  style={S.sub}       className="hero-subtitle">Fill in the details, let’s do some catching up.</p>
 
@@ -134,14 +143,22 @@ export default function SignInPage() {
       </div>
 
       <div style={S.right} className="welcome-panel">
-        <h2 className="welcome-title">Welcome to MindfulSpace</h2>
-        <p className="welcome-sub">Your safe space to heal, grow and thrive</p>
-        <img src={hourglassUrl} alt="" style={S.imgBg} />
-        <blockquote style={S.quote} className="quote">
-          “Breathe in peace. Breathe out pressure.”<br/>
-          <span>— Anonymous</span>
-        </blockquote>
-      </div>
+  <div style={S.welcomeContent}>
+    <h2 style={S.welcomeTitle} className="welcome-title">
+      Welcome to <br /> MindfulSpace
+    </h2>
+    <p style={S.welcomeSub} className="welcome-sub">
+      Your safe space to heal, grow and thrive
+    </p>
+  </div>
+
+  <img src={hourglassUrl} alt="" style={S.imgBg} />
+
+  <blockquote style={S.quote} className="quote">
+    “Breathe in peace. Breathe out pressure.”<br />
+    <span>— Anonymous</span>
+  </blockquote>
+</div>
     </div>
   )
 }
