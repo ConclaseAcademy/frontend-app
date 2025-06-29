@@ -47,6 +47,7 @@ export default function SignInPage() {
     welcomeTitle: { fontSize: '2.5rem', lineHeight: '1.2', marginBottom: '1rem', fontWeight: 'bold', color: '#fff'},
     welcomeSub: { fontSize: '1.2rem', fontWeight: '300', maxWidth: '80%', margin: '0 auto', color: '#f0f0f0'},
     logoImage: { width: '150px', height: 'auto', marginBottom: '2rem' },
+    fontFamily: "'Poppins', sans-serif",
   }
 
   return (
