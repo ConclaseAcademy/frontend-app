@@ -12,8 +12,19 @@ export default function NavigationCaption(){
                 and personalised guidance
             </p>
             <div>
-                <Button style={{background:'#ffff', color:'#173162'}}>Start Your Journey</Button>
-                <Button style={{width:'169px'}}>Learn more</Button>
+                <Button 
+                    style={{
+                        background:'#ffff', 
+                        color:'#173162',
+                        fontWeight: "600",
+                        fontSize: "16px"
+                        }}>Start Your Journey</Button>
+                <Button 
+                    style={{
+                        width:'169px',
+                        fontWeight: "600",
+                        fontSize: "16px"
+                        }}>Learn more</Button>
             </div>
         </div>
 }

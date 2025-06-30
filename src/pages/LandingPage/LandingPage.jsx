@@ -14,7 +14,7 @@ export default function LandingPage() {
       <About />
       <Everything />
       <HowItWorks />
-      {/* <Testimonies /> */}
+      <Testimonies />
       <CTA />
       <Footer />
     </>

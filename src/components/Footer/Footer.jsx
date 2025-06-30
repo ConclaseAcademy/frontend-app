@@ -11,23 +11,28 @@ export default function Footer(){
                 <p>Learn More</p>
                 <p>FAQs</p>
             </div>
-            <div className="footer-card">
-                <h2>Features</h2>
-                <p>Mood Tracking</p>
-                <p>Journaling</p>
-                <p>Meditation</p>
-                <p>Habit Tracking</p>
-                <p>AI Insights</p>
+            <div className="footer-card footer-card">
+            {/* <div className="footer-card footer-card-2"> */}
+                <div>
+                    <h2>Features</h2>
+                    <p>Mood Tracking</p>
+                    <p>Journaling</p>
+                    <p>Meditation</p>
+                    <p>Habit Tracking</p>
+                    <p>AI Insights</p>
+                </div>
             </div>
-            <div  className="footer-card">
-                <h2>Company</h2>
-                <p>About Us</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-                <p>Contact Us</p>
+            <div  className="footer-card footer-card">
+                <div>
+                    <h2>Company</h2>
+                    <p>About Us</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                    <p>Contact Us</p>
+                </div>
             </div>
-            <div  className="footer-card">
-                <>
+            <div  className="footer-card footer-card">
+                <div>
                 <h2>Contact Us</h2>
                 <div className="footer-icon">
                     <img src={TwitterSrc} width={25.5} height={25.5} />
@@ -45,7 +50,7 @@ export default function Footer(){
                     <img src={InstagramSrc} width={25.5} height={25.5} />
                     <p>Instagram</p>
                 </div>
-                </>
+                </div>
             </div>
         </div>
 }

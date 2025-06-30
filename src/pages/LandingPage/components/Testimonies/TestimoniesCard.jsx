@@ -9,6 +9,6 @@ export default function TestimoniesCard({id, name, role, country, desc}){
             <h5>{role}</h5>
             <h6>{country}</h6>
         </div>
-        <p className="testimonies-hover">{desc}</p>
+        <div className="testimonies-hover">{desc}</div>
     </div>
 }

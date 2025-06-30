@@ -1,6 +1,8 @@
 .testimonies-container{
     background: #DDDECC;
     padding: 30px 95px 92px 95px;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .testimonies-container h3{
@@ -11,7 +13,7 @@
     text-align: center;
 }
 
-.testimonies-container p{
+.testimonies-container > p{
     font-weight: 500;
     font-size: 24px;
     margin-bottom: 69px;
@@ -20,7 +22,26 @@
 }
 
 .testimonies-map{
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     column-gap: 16px;
+    display: grid;
+    grid-template-columns: 321px 321px 321px;
+    /* grid-template-rows: 1fr; */
+}
+
+/* responsives */
+@media (max-width:900px){
+    .testimonies-map{
+        grid-template-columns: 321px 321px;
+        gap: 30px;
+    }
+}
+
+@media (max-width:600px){
+    .testimonies-map{
+        grid-template-columns: 321px;
+        align-items: center;
+        justify-content: center;
+    }
 }

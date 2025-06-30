@@ -5,7 +5,9 @@
     background-size: cover;
     height: 1002px;
     padding-top: 47px;
-    padding-left: 58px;
-    padding-right: 58px; 
+    /* padding-left: 58px;
+    padding-right: 58px;  */
     position: relative;
+    padding-left: 4.3%;
+    padding-right: 4.3%;
 }
