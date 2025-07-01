@@ -76,7 +76,7 @@ jobs:
             docker load < myapp.tar
             
             # after the deletion or an existing contain or creation of a new container
-            docker run -d --name myapp -p 80:80 myapp:${{ github.sha }}
+            docker run -d --name myapp -p 8080:80 myapp:${{ github.sha }}
             
             # to remove the zipped file
             rm myapp.tar
