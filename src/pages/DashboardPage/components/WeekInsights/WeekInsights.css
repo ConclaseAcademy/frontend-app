@@ -1,0 +1,26 @@
+.weekinsights-container{
+    /* th: 490; */
+/* height: 303px; */
+/* gap: 18px;  */
+    border-radius: 16px;
+    padding-top: 24px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    background: #FFFFFF;
+}
+
+.weekinsights-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekinsights-info{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}

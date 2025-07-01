@@ -4,7 +4,7 @@ import "./MainDashboardCard.css"
 export default function MainDashboardCard({label, desc, time, btn, timeColor, btnColor}){
     return  <div className="maindashboardcard-container">
             <div>
-                <img src="" />
+                {/* <img src="" /> */}
                 <p>{label}</p>
             </div>
             <p>{desc}</p>

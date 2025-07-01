@@ -1,4 +1,5 @@
 .dashboardpage-container{
-    background: #E1E8FB;
-    height: 100vh;
+    /* background: #E1E8FB; */
+    height: 100%;
+    /* flex-grow: 1; */
 }

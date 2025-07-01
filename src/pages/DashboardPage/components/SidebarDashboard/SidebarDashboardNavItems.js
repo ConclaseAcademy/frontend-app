@@ -13,18 +13,14 @@ export const SidebarNavItem = [
     },
     {
         id:3,
-        navlink:'Meditate'
+        navlink:'Insights'
     },
     {
         id:4,
-        navlink:'Meditate'
-    },
-    {
-        id:5,
         navlink:'Habits'
     },
     {
-        id:6,
+        id:5,
         navlink:'Ai Companion'
     }
 ]

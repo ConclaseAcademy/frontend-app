@@ -1,14 +1,17 @@
 import "./DashboardNavigation.css";
-import Logo from "../../../../components/Logo/Logo"
+import Logo from "../../../../components/Logo/Logo";
+import BellSrc from "../../assets/dashnotification.svg";
+import SettingSrc from "../../assets/dashsetting.svg";
+import LanguageSrc from "../../assets/dashlanguage.svg";
 
 export default function DashboardNavigation(){
     return <div className="dashboardnavigation-container">
-        <Logo />
+        {/* <Logo /> */}
         <div>
             <ul className="dashboardnaviagtion-navitem">
-                <li>bell</li>
-                <li>settings</li>
-                <li>language</li>
+                <li><img src={BellSrc} /></li>
+                <li><img src={SettingSrc} /></li>
+                <li><img src={LanguageSrc} />Eng</li>
             </ul>
         </div>
     </div>
