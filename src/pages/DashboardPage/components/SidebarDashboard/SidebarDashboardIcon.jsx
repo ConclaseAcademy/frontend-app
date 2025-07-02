@@ -6,7 +6,6 @@ import HabitsSrc from "../../assets/dashhealth.svg"
 import AiSrc from "../../assets/dashmessage.svg";
 
 export default function SidebarDashboardIcon({id}){
-    console.log("fkjkf: ", id)
     switch(id){
         case 0:
             return <img src={HomeSrc} />

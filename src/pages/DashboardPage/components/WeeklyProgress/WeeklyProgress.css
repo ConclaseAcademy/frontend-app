@@ -5,14 +5,29 @@ gap: 12px; */
     border-radius: 16px;
     padding-top: 24px;
     padding-right: 16px;
-    padding-bottom: 24px;
+    padding-bottom: 19px;
     padding-left: 16px;
     background: #FFFFFF;
     text-align: center;
 
 }
+.weeklyprogress-container h3{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 12px;
+}
 
 .weeklyprogress-main{
     display: flex;
     flex-direction: row;
+    column-gap: 68px;
+}
+
+.weeklyprogress-main div p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #080D17;
+    width: 185px;
+    margin: 0px;
+    padding: 0px;
 }

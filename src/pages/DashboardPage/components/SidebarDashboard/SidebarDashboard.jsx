@@ -1,7 +1,8 @@
 import Logo from "../../../../components/Logo/Logo"
 import "./SidebarDashboard.css"
 import SidebarDashboardIcon from "./SidebarDashboardIcon"
-import { SidebarNavItem } from "./SidebarDashboardNavItems"
+import { SidebarNavItem } from "./SidebarDashboardNavItems";
+import ProfileSrc from "../../assets/userProfiledash.svg"
 
 export default function SiderbarDashboard(){
     return <div className="sidebardashboard-container">
@@ -16,8 +17,9 @@ export default function SiderbarDashboard(){
                 })}
             </div>
         </div>
-        <div>
-            Profile
+        <div style={{display:'flex', flexDirection:'row', columnGap:'10px', alignItems:'center'}}>
+            <img src={ProfileSrc} height={30} width={30} />
+            <p>Profile</p>
         </div>
     </div>
 }

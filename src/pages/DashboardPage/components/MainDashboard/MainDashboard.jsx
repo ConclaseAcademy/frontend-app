@@ -6,43 +6,16 @@ import BalloonSrc from "../../assets/dashballoon.svg";
 import WeeklyProgress from "../WeeklyProgress/WeeklyProgress";
 import TodayHabitsSrc from "../../assets/dashdirecthit.svg";
 import DashboardNavigation from "../DashboardNavigation/DashboardNavigation"
+import { mainDashCardData } from "./MainDashboardData";
 
 // fetching from an Api
-const mainDashCardData = [
-    {
-        id:0,
-        label:"Current Mood",
-        desc:"Last Logged 'Anxious'",
-        time:"2 hours ago",
-        btn:'Check in',
-        color:"",
-        btnColor:"#1855CF"
-    },
-    {
-        id:1,
-        label:"Journal",
-        desc:"Last entry 2 days ago",
-        time:"Streak 2 days",
-        btn:'Write',
-        timeColor:"#319F43",
-        btnColor:"#9B65F2"
-    },
-    {
-        id:2,
-        label:"Meditation",
-        desc:"Today's session: 10 min",
-        time:"Calm...Focus...Sleep",
-        btn:'Meditation',
-        timeColor:"#E35712",
-        btnColor:"#00AC0E"
-    }
-]
+
 
 export default function MainDashboard(){
     return <div className="maindashboard-container">
         <DashboardNavigation />
-        <p style={{marginBottom:'8px'}}>Welcome back, Alex</p>
-        <p style={{marginBottom:'20px'}}>Let's check in on your mind today</p>
+        <p className="maindashboard-p-1">Welcome back, Alex!</p>
+        <p className="maindashboard-p-2">Let's check in on your mind today</p>
         <div className="maindashboard-status">
             {mainDashCardData.map(item => <MainDashboardCard key={item.id} {...item} />)}
         </div>
@@ -55,22 +28,54 @@ export default function MainDashboard(){
         <div className="maindashboard-piestatus">
             <WeeklyProgress />
             <div className="maindashboard-todaysactivity">
-                <div style={{display:'flex', flexDirection:'row'}}>
-                    <img src={TodayHabitsSrc} />
-                    <h3>Today’s Habits</h3>
-                </div>
-                <div style={{display:'flex', flexDirection:'row'}}>
-                    <input type="radio" />
-                    <p>Drink Water</p>
-                </div>
-                <div style={{display:'flex', flexDirection:'row'}}>
-                    <input type="radio" />
-                    <p>5 Minutes work</p>
-                </div>
-                <div style={{display:'flex', flexDirection:'row'}}>                    
-                    <input type="radio" />
-                    <p>Meditate</p>
-                </div>
+                <div>
+                    <div style={{display:'flex', flexDirection:'row',
+                        marginBottom:'15px',alignItems:"center",
+                        columnGap:'8px'}}>
+                        <img src={TodayHabitsSrc} />
+                        <h3 style={{
+                            fontWeight: "600",
+                            fontSize: "15px",
+                            color: "#080D17",
+                            margin:'0px',
+                            padding:'0px',
+                            }}>Today’s Habits</h3>
+                    </div>
+                    <div style={{display:'flex', flexDirection:'row',  
+                    alignItems:'center', textAlign:'center',
+                    marginBottom:'10px', columnGap:'8px'}}>
+                        <input type="radio" />
+                        <p style={{
+                            fontWeight: "500",
+                            fontSize: "14px",
+                            color: "#080D17",
+                            margin:'0px',
+                            padding:'0px',
+                        }}>Drink Water</p>
+                    </div>
+                    <div style={{display:'flex', flexDirection:'row', 
+                        marginBottom:'10px', alignItems:'center', 
+                        columnGap:'8px'}}>
+                        <input type="radio" />
+                        <p style={{
+                            fontWeight: "500",
+                            fontSize: "14px",
+                            color: "#080D17",
+                            margin:'0px',
+                            padding:'0px',
+                        }}>5 Minutes work</p>
+                    </div>
+                    <div style={{display:'flex', flexDirection:'row', columnGap:'8px', alignItems:'center'}}>                    
+                        <input type="radio" />
+                        <p style={{
+                            fontWeight: "500",
+                            fontSize: "14px",
+                            color: "#808080",
+                            margin:'0px',
+                            padding:'0px'
+                        }}>Meditate</p>
+                    </div>
+                    </div>
             </div>
         </div>
 
@@ -79,7 +84,7 @@ export default function MainDashboard(){
                 <img width="30px" height="25.94px" src={BalloonSrc} />
                 <h4>Ai Suggestion</h4>
             </div>
-            <div>
+            <div className="maindashboard-footer-down">
                 <span>Try a calming breath session this evening</span>
                 <img />
                 <span>Meditation will help you alot</span>

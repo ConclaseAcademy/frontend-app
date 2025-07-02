@@ -9,6 +9,9 @@ export default function JournalAnalysis(){
         <VictoryChart
         domainPadding={{ x: 20 }}
         horizontal
+        // height={137}
+        height={200}
+    
         // theme={VictoryTheme.clean}
         >
             <VictoryBar />

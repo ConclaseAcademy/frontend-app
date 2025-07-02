@@ -8,6 +8,9 @@
     padding-bottom: 24px;
     padding-left: 16px;
     background: #FFFFFF;
+    /* flex-grow: 1; */
+    /* background-color: rebeccapurple; */
+    height: 100%;
 }
 
 .weekinsights-header{
@@ -17,10 +20,24 @@
     align-items: center;
 }
 
+.weekinsights-header h3{
+    font-weight: 500;
+    font-size: 15px;
+    color: #080D17;
+}
+
 .weekinsights-info{
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
     align-items: center;
+    margin-top: 18px;
+}
+
+.weekinsights-info p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #0EC676;
+
 
 }

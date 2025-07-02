@@ -20,12 +20,23 @@ export default function WeekInsights(){
     return <div className="weekinsights-container">
         <div className="weekinsights-header">
             <h3>This Week's Insight</h3>
-            <Link>View Details</Link>
+            <Link 
+
+              style={{
+                textDecoration:'underline',
+                fontWeight: "400",
+                fontSize:"14px",
+                color: "#0557FB"
+                }}>
+              View Details
+            </Link>
         </div>
         <VictoryChart
         // theme={VictoryTheme.clean}
-        style={{height:'174px !important'}}
+        // style={{height:'174px !important'}}
         // style={{hei}}
+        height={201}
+        // height={173}
         >
         <VictoryLine
             data={series[0].data.map(

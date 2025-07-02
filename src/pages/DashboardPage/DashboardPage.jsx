@@ -5,10 +5,7 @@ import "./DashboardPage.css";
 
 export default function DashboardPage(){
     return <div className="dashboardpage-container">
-        {/* <DashboardNavigation /> */}
-        <div style={{display:'grid', height:"100%", gridTemplateColumns:"1fr 4fr", gridTemplateRows:'1fr'}}>
             <SiderbarDashboard />
             <MainDashboard />
-        </div>
     </div>
 }
