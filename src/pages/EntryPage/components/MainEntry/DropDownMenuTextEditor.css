@@ -1,0 +1,31 @@
+.dropdownmenutexteditor-container{
+    position:absolute;
+    top:40px;
+    left: -30px;
+    /* background:red; */
+    /* width: 178;
+    height: 139;
+    top: -9388px;
+    left: -16501px; */
+    /* gap: 10px; */
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 2px black;
+    z-index: 10;
+
+}
+
+.dropdownmenutexteditor-container div p{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    font-size: 16px;
+
+}
