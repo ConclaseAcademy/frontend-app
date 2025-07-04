@@ -1,10 +1,10 @@
 import { useStore } from "../../../../store/modalstore";
 import "./NavDropDownUser.css";
 
-export default function NavDropDownUser(){
+export default function NavDropDownUser({ref}){
     const toggleLogOutPop = useStore((state) => state.toggleLogOutPop)
 
-    return <div className="navdropdownuser-container">
+    return <div ref={ref} className="navdropdownuser-container" name="navdropdownuser-container">
                 <p>Account</p>
                 <p onClick={() => {
                     toggleLogOutPop();

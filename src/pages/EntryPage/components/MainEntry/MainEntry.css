@@ -1,6 +1,12 @@
 .mainentry-container{
     background: #FFFFFF;
     position: relative;
+    margin: 0px;
+    /* transition: margin 1s; */
+}
+
+.mainentry-container:hover{
+    /* margin-left: 200px;h */
 }
 
 .mainentry-nav{
@@ -21,6 +27,11 @@
     column-gap: 27px;
     align-items: center;
     position: relative;
+    /* background-color: red; */
+}
+
+.mainentry-icon img{
+    cursor: pointer;
 }
 
 .mainentry-user{

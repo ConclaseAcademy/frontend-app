@@ -1,6 +1,6 @@
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import "./MainEntryTextEditor.css";
 import StarOffSrc from "../../assets/offstar.svg";
 import saveSrc from "../../assets/save.svg";
@@ -14,6 +14,25 @@ import DropDownMenuTextFormat from './DropDownMenuTextFormat';
 export default function MainEntryTextEditor(){
   const [open, setOpen] = useState(false);
   const [openDropDown, setOpenDropDown] = useState(false);
+
+    //   ref
+    const menuDropDownTextEditor = useRef(null);
+
+    // closing the popup when clicked on anywhere in the document
+    useEffect(() => {
+        document.addEventListener('click', (e) => {        
+            if(menuDropDownTextEditor.current && !menuDropDownTextEditor.current.contains(e.target)){
+                setOpenDropDown(false);
+            }
+        });
+
+        return document.removeEventListener('click', (e) => {
+            if(menuDropDownTextEditor.current && !menuDropDownTextEditor.current.contains(e.target)){
+                setOpenDropDown(false);
+            }
+        });
+    }, [])
+  
 
   const editor = useEditor({
     extensions: [StarterKit],
@@ -49,8 +68,11 @@ export default function MainEntryTextEditor(){
                     <img 
                         src={menuEditorSrc} 
                         height={30} width={30}
-                        onClick={() => {setOpenDropDown(prev => !prev)}}  />
-                    {openDropDown && (<DropDownMenuTextEditor />)}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setOpenDropDown(prev => !prev)
+                            }}  />
+                    {openDropDown && (<DropDownMenuTextEditor ref={menuDropDownTextEditor} />)}
                 </div>
             </div>
         </div>

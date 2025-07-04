@@ -4,15 +4,19 @@ import UploadSrc from "../../assets/uploaddropdown.svg";
 import ShareSrc from "../../assets/sharedropdown.svg";
 import { useStore } from "../../../../store/modalstore";
 
-export default function DropDownMenuTextEditor(){
+export default function DropDownMenuTextEditor({ref}){
     const toggleDeleteEntryPop = useStore((state) => state.toggleDeleteEntryPop);
+    const toggleShareEntryPop = useStore((state) => state.toggleShareEntryPop);
 
-    return  <div className="dropdownmenutexteditor-container">
+    return  <div ref={ref} className="dropdownmenutexteditor-container">
                 <div style={{display:'flex', flexDirection:'row', columnGap:'8px'}}>
                     <img src={UploadSrc} height={24} width={24} />
                     <p>Export</p>
                 </div>
-                <div style={{display:'flex', flexDirection:'row', columnGap:'8px'}}>
+                <div style={{display:'flex', flexDirection:'row', 
+                    columnGap:'8px', cursor:'pointer'}}
+                    onClick={() => {toggleShareEntryPop()}}
+                    >
                     <img src={ShareSrc} height={24} width={24} />
                     <p style={{color: "#000000B2"}}>Share</p>
                 </div>

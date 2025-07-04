@@ -30,6 +30,7 @@
     color: #0E5CF9;
     column-gap: 8px;
     cursor: pointer;
+    /* padding-bottom: 33.5px; */
 }
 
 .mainentrytexteditor-date{
@@ -49,6 +50,7 @@
     column-gap: 12px;
     font-weight: 400;
     font-size: 20px;
+    /* padding-bottom: 33.5px; */
 }
 
 .mainentrytexteditor-date-menu{
