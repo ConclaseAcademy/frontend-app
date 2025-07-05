@@ -2,7 +2,7 @@ import Logo from "../../../../components/Logo/Logo"
 import "./SidebarDashboard.css"
 import SidebarDashboardIcon from "./SidebarDashboardIcon"
 import { SidebarNavItem } from "./SidebarDashboardNavItems";
-import ProfileSrc from "../../assets/userProfiledash.svg"
+import ProfileSrc from "../../assets/userprofiledash.svg"
 
 export default function SiderbarDashboard(){
     return <div className="sidebardashboard-container">
