@@ -1,15 +1,38 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../../../../components/Button/Button";
 import "./SharePopUp.css";
 import EmailSrc from "../../assets/date.svg";
 import SharePopUpEmail from "./SharePopUpEmail";
+import { useStore } from "../../../../store/modalstore";
 
 export default function SharePopUp(){
     const [activeTab, setActiveTab] = useState(0);
     const [urlDemo, setUrlDemo]  = useState(true);
+    // const [openDropDown, setOpenDropDown] = 
+
+    // getting the slice of the state
+    const toggleShareEntryPop = useStore((state) => state.toggleShareEntryPop);
+
+    // ref
+    const shareRef = useRef(null);
+
+    // closing the popup when clicked on anywhere in the document
+    useEffect(() => {
+        document.addEventListener('click', (e) => {        
+            if(shareRef.current && !shareRef.current.contains(e.target)){
+                toggleShareEntryPop()
+            }
+        });
+
+        return document.removeEventListener('click', (e) => {
+            if(shareRef.current && !shareRef.current.contains(e.target)){
+                toggleShareEntryPop()
+            }
+        });
+    }, [])    
 
     return <div className="sharepopup-container">
-        <div className="sharepopup-content">
+        <div ref={shareRef} className="sharepopup-content">
             <h3>Share Entry</h3>
             <div className="sharepopup-tab">
                 <Button

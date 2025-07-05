@@ -9,20 +9,31 @@ export default function DropDownMenuTextEditor({ref}){
     const toggleShareEntryPop = useStore((state) => state.toggleShareEntryPop);
 
     return  <div ref={ref} className="dropdownmenutexteditor-container">
-                <div style={{display:'flex', flexDirection:'row', columnGap:'8px'}}>
+                <div style={{display:'flex', flexDirection:'row', 
+                    columnGap:'8px', cursor:'pointer'}}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                    }}
+                    >
                     <img src={UploadSrc} height={24} width={24} />
                     <p>Export</p>
                 </div>
                 <div style={{display:'flex', flexDirection:'row', 
                     columnGap:'8px', cursor:'pointer'}}
-                    onClick={() => {toggleShareEntryPop()}}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        toggleShareEntryPop()
+                    }}
                     >
                     <img src={ShareSrc} height={24} width={24} />
                     <p style={{color: "#000000B2"}}>Share</p>
                 </div>
                 <div style={{display:'flex', flexDirection:'row',
                      columnGap:'8px', cursor:'pointer'}}
-                     onClick={() => {toggleDeleteEntryPop()}}
+                     onClick={(e) => {
+                        e.stopPropagation();
+                        toggleDeleteEntryPop()
+                    }}
                      >
                     <img src={DeleteSrc} height={24} width={24} />
                     <p>Delete</p>

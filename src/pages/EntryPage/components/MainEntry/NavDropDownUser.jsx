@@ -6,7 +6,8 @@ export default function NavDropDownUser({ref}){
 
     return <div ref={ref} className="navdropdownuser-container" name="navdropdownuser-container">
                 <p>Account</p>
-                <p onClick={() => {
+                <p onClick={(e) => {
+                    e.stopPropagation();
                     toggleLogOutPop();
                 }}>Log Out</p>
             </div>

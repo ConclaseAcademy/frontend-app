@@ -1,12 +1,31 @@
 import Button from "../../../../components/Button/Button";
 import "./DeleteEntryPopUp.css";
 import { useStore } from "../../../../store/modalstore";
+import { useEffect, useRef } from "react";
 
 export default function DeleteEntryPopUp(){
     const toggleDeleteEntryPopUp = useStore((state) => state.toggleDeleteEntryPop);
 
+    //   ref
+    const deleteRef = useRef(null);
+
+    // closing the popup when clicked on anywhere in the document
+    useEffect(() => {
+        document.addEventListener('click', (e) => {        
+            if(deleteRef.current && !deleteRef.current.contains(e.target)){
+                toggleDeleteEntryPopUp()
+            }
+        });
+
+        return document.removeEventListener('click', (e) => {
+            if(deleteRef.current && !deleteRef.current.contains(e.target)){
+                toggleDeleteEntryPopUp();
+            }
+        });
+    }, [])    
+
     return <div className="deleteentrypopup-container">
-        <div className="deleteentrypopup-content">
+        <div ref={deleteRef} className="deleteentrypopup-content">
             <h3>MindfulSpace says</h3>
             <p>Are you sure you want to delete this entry?</p>
             <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
