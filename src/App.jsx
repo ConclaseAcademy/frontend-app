@@ -1,9 +1,14 @@
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router';
 import LandingPage from './pages/LandingPage/LandingPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
 import EntryPage from './pages/EntryPage/EntryPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
+import ReminderPage from './pages/ReminderPage/ReminderPage';
+import DeletePage from './pages/DeleteAccount/DeleteAccount';
+
 
 function App() {
   return (
@@ -24,7 +29,10 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/entry" element={<EntryPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/journal" element={<JournalEntryPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/privacy-settings" element={<PrivacyPage />} />
+          <Route path="/reminder" element={<ReminderPage />} />
+          <Route path="/delete-account" element={<DeletePage />} />
         </Routes>
 
     
