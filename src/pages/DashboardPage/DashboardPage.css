@@ -1,4 +1,10 @@
 .dashboardpage-container{
-    background: #E1E8FB;
-    height: 100vh;
+    /* background: #E1E8FB; */
+
+    display: flex;
+    /* display:grid; */
+    /* height:100%; */
+    grid-template-columns:0.5fr 5fr;
+    /* grid-template-rows:1fr; */
+    position: relative;
 }

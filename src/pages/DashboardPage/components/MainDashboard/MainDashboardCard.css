@@ -2,12 +2,35 @@
     background-color: #ffff;
     flex-grow: 1;
     color: #808080;
-border-radius: 16px;
-padding: 16px;
-gap: 4px;
+    border-radius: 16px;
+    padding: 16px;
+    padding-top: 25px;
+    /* gap: 4px; */
+    padding-bottom: 24px;
+    margin-bottom: 23px;
 
 }
 
-.maindashboardcard-container div p{
+.maindashboardcard-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4px;
+    margin-bottom: 4px;
+}
+
+.maindashboardcard-img p{
     color: #080D17;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.maindashboardcard-desc{
+    margin: 0px;
+    padding: 0px;
+}
+
+.maindashboardcard-time{
+    margin: 0px;
+    padding: 0px;
 }

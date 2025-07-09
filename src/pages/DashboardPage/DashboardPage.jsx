@@ -5,10 +5,7 @@ import "./DashboardPage.css";
 
 export default function DashboardPage(){
     return <div className="dashboardpage-container">
-        <DashboardNavigation />
-        <div style={{display:'flex', flexDirection:'row'}}>
             <SiderbarDashboard />
             <MainDashboard />
-        </div>
     </div>
 }
