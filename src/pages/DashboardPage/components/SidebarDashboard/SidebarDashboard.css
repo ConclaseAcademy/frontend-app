@@ -16,9 +16,14 @@
     justify-content: space-between;
     padding: 26px 28.5px 49px 81px;
     /* position: fixed; */
+    /* width: 20%;
+    /* display: inline-block */
+    /* top: 0px;
+    right: 0px; */ 
 }
 
 .sidedashboard-navitem{
+    margin-top:68.95px;
     display: flex;
     flex-direction: column;
     row-gap: 24px;

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import Button from "../../components/Button/Button";
 import InputControl from "../../components/InputControl/InputControl";
 import Logo from "../../components/Logo/Logo";
@@ -10,6 +10,7 @@ import signUpImgSrc from "./assets/signup.svg";
 
 
 export default function SignUpPage(){
+    const navigate = useNavigate();
     return <div className="signuppage-container">
         <div className="signuppage-left">
             <div className="signuppage-logo">
@@ -62,7 +63,12 @@ export default function SignUpPage(){
                             }}>
                     Sign Up
                 </Button>
-                <p style={{margin:'0px', marginTop:'-6px'}}>Already have an account? <NavLink>Log In</NavLink></p>
+                <p style={{margin:'0px', marginTop:'-6px'}}>Already have an account? 
+                    <span style={{color:"#080D17", cursor:'pointer'}} 
+                    onClick={() => {navigate('/signin')}}>
+                        Log In
+                    </span>
+                </p>
             </form>
         </div>
         <div className="signuppage-right">

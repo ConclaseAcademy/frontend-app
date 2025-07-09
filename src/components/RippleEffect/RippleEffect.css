@@ -1,0 +1,23 @@
+.rippleeffect-container{
+    background-position: center;
+    transition: background 0.8s opacity 0.8s;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 2px;
+}
+
+.rippleeffect-container:hover{
+    /* background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5) center/15000%; */
+    background: rgba(255, 255, 255, 0.125);
+}
+
+.rippleeffect-container:active, .rippleeffect-container:focus{
+    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: #6eb9f7; */
+    background-size: 100%;
+    transition: background 0s opacity 0s;
+    opacity: 0.5;
+}

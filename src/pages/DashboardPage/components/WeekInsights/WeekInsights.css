@@ -1,16 +1,13 @@
 .weekinsights-container{
-    /* th: 490; */
-/* height: 303px; */
-/* gap: 18px;  */
     border-radius: 16px;
     padding-top: 24px;
     padding-right: 16px;
     padding-bottom: 24px;
     padding-left: 16px;
     background: #FFFFFF;
-    /* flex-grow: 1; */
-    /* background-color: rebeccapurple; */
-    height: 100%;
+    /* height: 100%;
+    width: 100%; */
+    flex-grow: 1;
 }
 
 .weekinsights-header{
@@ -31,7 +28,7 @@
     flex-direction: row;
     /* justify-content: space-between; */
     align-items: center;
-    margin-top: 18px;
+    /* margin-top: 18px; */
 }
 
 .weekinsights-info p{

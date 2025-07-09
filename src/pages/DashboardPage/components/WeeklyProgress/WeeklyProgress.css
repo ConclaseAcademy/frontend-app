@@ -20,7 +20,8 @@ gap: 12px; */
 .weeklyprogress-main{
     display: flex;
     flex-direction: row;
-    column-gap: 68px;
+    column-gap: 20px;
+    /* column-gap: 68px; */
 }
 
 .weeklyprogress-main div p{

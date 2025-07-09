@@ -28,7 +28,7 @@ export default function LogOutPopUp(){
             <h3>MindfulSpace says</h3>
             <p>Are you sure you want to log out?</p>
             <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
-                <div style={{display:'flex', flexDirection:'row', columnGap:'16px',}}>
+                <div className="logoutpopup-btncontainer">
                     <Button
                         style={{
                             width: "170px",
@@ -40,7 +40,6 @@ export default function LogOutPopUp(){
                             border:"0px",
                             fontWeight: "700",
                             fontSize: "16px",
-                            marginLeft:'153px'
                         }}
                         onClick={() => {
                             toggleLogOutPop()

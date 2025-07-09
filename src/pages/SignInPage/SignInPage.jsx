@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import Button from "../../components/Button/Button";
 import InputControl from "../../components/InputControl/InputControl";
 import Logo from "../../components/Logo/Logo";
@@ -29,6 +29,7 @@ const formInputControlData = [
 ]
 
 export default function SignInPage(){
+    const navigate = useNavigate();
     return <div className="signinpage-container">
         <div className="signinpage-left">
             <div style={{marginLeft:'-5%'}}>
@@ -50,7 +51,9 @@ export default function SignInPage(){
                     fontWeight: "600",
                     fontSize: "15px",
                     // height:'56px'
-                    }}>Log in</Button>
+                    }}
+                    onClick={() => {navigate("/dashboard")}}
+                    >Log in</Button>
                 <Button style={{
                     borderRadius: "50px",
                     borderWidth: "1px",
@@ -72,7 +75,12 @@ export default function SignInPage(){
                         {/* <img src={googleIconSrc} alt="google icon button" width="34.210269927978516" height="28" /> */}
                         <span>Continue with Google</span>
                 </Button>
-                <p style={{margin:'0px', marginBottom:'164px'}}>Don’t have an account? <NavLink>Sign Up</NavLink></p>
+                <p style={{margin:'0px', marginBottom:'164px'}}>Don’t have an account?{" "} 
+                    <span style={{color:"#080D17", cursor:'pointer'}} 
+                    onClick={() => {navigate('/signup')}}>
+                        Sign Up
+                    </span>
+                </p>
             </form>
         </div>
         <div className="signinpage-right">

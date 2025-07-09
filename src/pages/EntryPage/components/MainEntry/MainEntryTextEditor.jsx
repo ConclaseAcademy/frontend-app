@@ -10,6 +10,7 @@ import textEditorSrc from "../../assets/textformat.svg";
 import menuEditorSrc from "../../assets/menueditor.svg";
 import DropDownMenuTextEditor from './DropDownMenuTextEditor';
 import DropDownMenuTextFormat from './DropDownMenuTextFormat';
+import RippleEffectDropDown from '../../../../components/RippleEffectDropDown/RippleEffectDropDown';
 
 export default function MainEntryTextEditor(){
   const [open, setOpen] = useState(false);
@@ -56,22 +57,28 @@ export default function MainEntryTextEditor(){
             </div>
             <div className='mainentrytexteditor-date-menu'>
                 <div>
-                    <img src={uploadSrc} alt='upload' 
-                    onClick={() => setOpen(!open)} height={30} width={30} />
+                    <RippleEffectDropDown>
+                        <img src={uploadSrc} alt='upload' 
+                        onClick={() => setOpen(!open)} height={30} width={30} />
+                    </RippleEffectDropDown>
                 </div>
                 <div style={{position:'relative', cursor:'pointer'}}>
-                    <img src={textEditorSrc} alt='text editor' 
-                    onClick={() => setOpen(!open)} height={30} width={30} />
+                    <RippleEffectDropDown>
+                            <img src={textEditorSrc} alt='text editor' 
+                        onClick={() => setOpen(!open)} height={30} width={30} />
+                    </RippleEffectDropDown>
                     {open && (<DropDownMenuTextFormat />)}
                 </div>
                 <div style={{position:'relative', cursor:'pointer'}}>
-                    <img 
+                    <RippleEffectDropDown>
+                        <img 
                         src={menuEditorSrc} 
                         height={30} width={30}
                         onClick={(e) => {
                             e.stopPropagation();
                             setOpenDropDown(prev => !prev)
                             }}  />
+                    </RippleEffectDropDown>
                     {openDropDown && (<DropDownMenuTextEditor ref={menuDropDownTextEditor} />)}
                 </div>
             </div>

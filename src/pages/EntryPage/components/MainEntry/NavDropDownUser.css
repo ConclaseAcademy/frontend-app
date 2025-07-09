@@ -22,3 +22,19 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+@media (max-width:800px){
+    .navdropdownuser-container{
+        top:50px;
+        left:-20px;
+    }
+
+}
+
+@media (max-width:400px){
+    .navdropdownuser-container{
+        /* top:60px; */
+        left:-30px;
+    }
+
+}

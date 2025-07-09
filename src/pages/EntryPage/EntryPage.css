@@ -1,12 +1,16 @@
 .entrypage-container{
-    display: grid;
-    grid-template-columns: 0px 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 0px 1fr; */
     /* grid-template-columns: 1fr 5fr; */
     position: relative;
     transition: all 1s;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
 }
 
-.entrypage-container-open{
+/* .entrypage-container-open{
     grid-template-columns: 340px 5fr;
     
-}
+} */

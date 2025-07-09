@@ -11,7 +11,11 @@ export default function DashboardNavigation(){
             <ul className="dashboardnaviagtion-navitem">
                 <li><img src={BellSrc} /></li>
                 <li><img src={SettingSrc} /></li>
-                <li><img src={LanguageSrc} />Eng<img src=""/></li>
+                <li className="dashboardnaviagtion-navitem-lang">
+                    <img src={LanguageSrc} />
+                    <p>Eng</p>
+                    <img src=""/>
+                </li>
             </ul>
         </div>
     </div>

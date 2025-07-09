@@ -29,7 +29,7 @@ export default function DeleteEntryPopUp(){
             <h3>MindfulSpace says</h3>
             <p>Are you sure you want to delete this entry?</p>
             <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
-                <div style={{display:'flex', flexDirection:'row', columnGap:'16px',}}>
+                <div className="deleteentrypopup-btncontainer">
                     <Button
                         style={{
                             width: "170px",
@@ -41,7 +41,6 @@ export default function DeleteEntryPopUp(){
                             border:"0px",
                             fontWeight: "700",
                             fontSize: "16px",
-                            marginLeft:'153px'
                         }}
                         onClick={() => {
                             toggleDeleteEntryPopUp()

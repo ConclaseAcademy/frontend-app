@@ -12,7 +12,8 @@ export default function EntryPage(){
     const shareEntryPopState = useStore((state) => state.shareentrypopup);
     const sideBarNavState = useStore((state) => state.sidebarnav);
 
-    return <div className={`entrypage-container ${sideBarNavState?'entrypage-container-open':''}`}>
+    return <div className={`entrypage-container`}>
+    {/* return <div className={`entrypage-container ${sideBarNavState?'entrypage-container-open':''}`}> */}
         {logoutPopState && (<LogOutPopUp />)}
         {deleteEntryPopState && (<DeleteEntryPopUp />)}
         {shareEntryPopState && <SharePopUp />}
