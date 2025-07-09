@@ -2,8 +2,11 @@
     color:#FFFFE3;
     width:640px;
     position:absolute;
-    left:80px;
-    bottom:197px
+    /* left:80px; */
+    /* bottom:197px; */
+    bottom:18%;
+    left: 6%;
+    z-index: 0;
 }
 
 .navigationcaption-container h1{
@@ -23,4 +26,16 @@
     flex-direction:row;
     align-items:center;
     column-gap:24px;
+}
+
+/* responsiveness */
+@media(max-width:700px){
+    .navigationcaption-container{
+        padding: 5%;
+        width: auto;
+        margin-top: 30%;
+        z-index: 0;
+        left: 0;
+
+    }
 }

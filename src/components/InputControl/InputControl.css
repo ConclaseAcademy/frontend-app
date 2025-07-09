@@ -1,0 +1,45 @@
+.inputcontrol-email, .inputcontrol-password, .inputcontrol-name{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.inputcontrol-email label, .inputcontrol-password label, .inputcontrol-name label{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #080D1799;
+
+}
+
+.inputcontrol-email input, .inputcontrol-password input, .inputcontrol-name input{
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    border-radius: 50px;
+    border-width: 1px;
+    background: #FFFFFF;
+    border: 1px solid #080D174D;
+    /* height: 56px; */
+}
+
+.inputcontrol-switch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -10px;
+    margin-bottom: 81px;
+}
+
+.inputcontrol-switch div{
+    font-weight: 500;
+    font-size: 16px;
+    color: #080D17;
+
+}
+
+.inputcontrol-checkbox{
+    margin-top: -6px;
+    margin-bottom: 56px;
+}

@@ -1,10 +1,10 @@
 import "./Navitem.css";
 
 export default function NavItem(){
-    return <ul className="navitem-container">
-        <li>About</li>
-        <li>Features</li>
-        <li>How It Works</li>
-        <li>Contact Us</li>
-    </ul>
+    return <div className="navitem-container">
+        <div>About</div>
+        <div>Features</div>
+        <div>How It Works</div>
+        <div>Contact Us</div>
+    </div>
 }
