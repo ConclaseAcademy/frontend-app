@@ -11,6 +11,14 @@
     font-size: 16px;
     font-weight: 700;
     color: #fff;
+    cursor: pointer;
+    background:transparent;
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.navitem-container div:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
 @media (max-width:900px){

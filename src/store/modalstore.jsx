@@ -5,8 +5,8 @@ export const useStore = create((set) => ({
   deleteentrypopup:false,
   shareentrypopup:false,
   sidebarnav:false,
-  toggleLogOutPop: () => set((state) => ({ logoutpopup: !state.logoutpopup })),
-  toggleDeleteEntryPop: () => set((state) => ({ deleteentrypopup: !state.deleteentrypopup })),
-  toggleShareEntryPop: () => set((state) => ({ shareentrypopup: !state.shareentrypopup })),
+  toggleLogOutPop: (value) => set(() => ({ logoutpopup: value })),
+  toggleDeleteEntryPop: (value) => set(() => ({ deleteentrypopup: value })),
+  toggleShareEntryPop: (value) => set(() => ({ shareentrypopup: value })),
   sideBarNav: () => set((state) => ({ sidebarnav: !state.sidebarnav }))
 }))

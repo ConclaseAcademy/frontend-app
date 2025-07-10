@@ -25,7 +25,7 @@ export default function DropDownMenuTextEditor({ref}){
                     columnGap:'8px', cursor:'pointer'}}
                     onClick={(e) => {
                         e.stopPropagation();
-                        toggleShareEntryPop()
+                        toggleShareEntryPop(true)
                     }}
                     >
                     <RippleEffectDropDown>
@@ -37,7 +37,7 @@ export default function DropDownMenuTextEditor({ref}){
                      columnGap:'8px', cursor:'pointer'}}
                      onClick={(e) => {
                         e.stopPropagation();
-                        toggleDeleteEntryPop()
+                        toggleDeleteEntryPop(true)
                     }}
                      >
                     <RippleEffectDropDown>

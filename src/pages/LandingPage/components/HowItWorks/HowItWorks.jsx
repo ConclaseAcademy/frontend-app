@@ -1,3 +1,4 @@
+import CustomLazyLoad from "../../../../components/CustomLazyLoad/CustomLazyLoad";
 import "./HowItWorks.css";
 import HowItWorksSrc from './assets/howitworks.svg';
 import MarkSrc from "./assets/mark.svg";
@@ -7,7 +8,8 @@ export default function HowItWorks(){
     {/* return <div style={{paddingTop:'54px', paddingBottom:'54px', background:' #F4F4F5'}}> */}
     <div style={{paddingTop:'24', paddingBottom:'66px'}}>
     <div className="howitworks-container">
-        <img className="howitworks-img" src={HowItWorksSrc} alt="how it works"/>
+        {/* <img className="howitworks-img" src={HowItWorksSrc} alt="how it works"/> */}
+        <CustomLazyLoad src={HowItWorksSrc} alt="how it works" style={{marginTop: "-20px", height: "571px"}}/>
         <div className="howitworks-content">
             <h2>How It Works</h2>
             <p>We believe mental wellness should be simple and supportive.</p>

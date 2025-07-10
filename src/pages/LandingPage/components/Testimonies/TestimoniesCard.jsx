@@ -2,6 +2,7 @@ import "./TestimoniesCard.css";
 import TestimoniesImage from "./TestimoniesImage";
 
 export default function TestimoniesCard({id, name, role, country, desc}){
+    console.log("test : ", id, typeof id)
     return <div className="testimoniescard-container">
         <div className="testimoniescard-content">
             <TestimoniesImage id={id}  />

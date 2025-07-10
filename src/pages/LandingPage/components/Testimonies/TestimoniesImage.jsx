@@ -1,20 +1,23 @@
 import Test1Src from "./assets/tes1.svg";
 import Test2Src from "./assets/tes2.svg";
 import Test3Src from "./assets/tes3.svg";
+import CustomLazyLoadImageZoomEffect from "../../../../components/CustomZoomLazyImageZoomEffect/CustomZoomLazyImageZoomEffect";
 
 
-export default function TestimoniesImage(id){ 
-    console.log("What is the id: ", id);
-
-    switch (id.id){
+export default function TestimoniesImage({id}) {
+    let UI;
+    switch(id){
         case 0:
-            // return <img src={Test1Src} height={293} width={293} alt="testimonies" />
-            return <img src={Test1Src} height={293} width={321} alt="testimonies" />
-
+            UI = <CustomLazyLoadImageZoomEffect src={Test1Src} style={{width:'321px', height:'293px'}} />
+            break;
+        
         case 1:
-            return <img src={Test2Src} height={293} width={321}  alt="testimonies" />
+            UI = <CustomLazyLoadImageZoomEffect src={Test2Src} style={{width:'321px', height:'293px'}} />
+            break;
 
         default:
-            return <img src={Test3Src} height={293} width={321}  alt="testimonies" />
+            UI = <CustomLazyLoadImageZoomEffect src={Test3Src} style={{width:'321px', height:'293px'}} />
+            break;
     }
+    return <>{UI}</>
 }

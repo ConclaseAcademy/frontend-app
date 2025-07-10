@@ -12,6 +12,7 @@ export default function SharePopUp(){
 
     // getting the slice of the state
     const toggleShareEntryPop = useStore((state) => state.toggleShareEntryPop);
+    const shareEntryPopState = useStore((state) => state.shareentrypopup);
 
     // ref
     const shareRef = useRef(null);
@@ -20,18 +21,18 @@ export default function SharePopUp(){
     useEffect(() => {
         document.addEventListener('click', (e) => {        
             if(shareRef.current && !shareRef.current.contains(e.target)){
-                toggleShareEntryPop()
+                toggleShareEntryPop(false)
             }
         });
 
         return document.removeEventListener('click', (e) => {
             if(shareRef.current && !shareRef.current.contains(e.target)){
-                toggleShareEntryPop()
+                toggleShareEntryPop(false)
             }
         });
     }, [])    
 
-    return <div className="sharepopup-container">
+    return <div className={`sharepopup-container ${shareEntryPopState?'sharepopup-container-open':''}`} >
         <div ref={shareRef} className="sharepopup-content">
             <h3>Share Entry</h3>
             <div className="sharepopup-tab">

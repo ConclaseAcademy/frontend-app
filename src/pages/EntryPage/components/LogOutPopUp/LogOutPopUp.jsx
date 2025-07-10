@@ -6,24 +6,29 @@ import { useEffect, useRef } from "react";
 export default function LogOutPopUp(){
     const logoutRef = useRef(null);
 
-    const toggleLogOutPop = useStore((state) => state.toggleLogOutPop);
+    const toggleLogOutPopUp= useStore((state) => state.toggleLogOutPop);
+    const logoutPopState = useStore((state) => state.logoutpopup);
 
     // closing the popup when clicked on anywhere in the document
     useEffect(() => {
         document.addEventListener('click', (e) => {        
-            if(logoutRef.current && !logoutRef.current.contains(e.target)){
-                toggleLogOutPop()
+            // if(logoutRef.current && !logoutRef.current.contains(e.target)){
+            //     toggleLogOutPop()
+            // }
+
+             if (logoutRef.current != e.target) {
+                toggleLogOutPopUp(false);
             }
         });
 
         return document.removeEventListener('click', (e) => {
-            if(logoutRef.current && !logoutRef.current.contains(e.target)){
-                toggleLogOutPop()
+             if (logoutRef.current != e.target) {
+                toggleLogOutPopUp(false);
             }
         });
     }, []) 
 
-    return <div className="logoutpopup-container">
+    return <div className={`logoutpopup-container ${logoutPopState?'logoutpopup-container-open':''}`}>
         <div ref={logoutRef} className="logoutpopup-content">
             <h3>MindfulSpace says</h3>
             <p>Are you sure you want to log out?</p>
@@ -42,7 +47,7 @@ export default function LogOutPopUp(){
                             fontSize: "16px",
                         }}
                         onClick={() => {
-                            toggleLogOutPop()
+                            toggleLogOutPopUp(false)
                         }}
                     >
                         Cancel

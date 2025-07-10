@@ -7,16 +7,17 @@ import SidebarEntry from "./components/SidebarEntry/SidebarEntry";
 import "./EntryPage.css";
 
 export default function EntryPage(){
-    const logoutPopState = useStore((state) => state.logoutpopup);
-    const deleteEntryPopState = useStore((state) => state.deleteentrypopup);
-    const shareEntryPopState = useStore((state) => state.shareentrypopup);
-    const sideBarNavState = useStore((state) => state.sidebarnav);
+    // const logoutPopState = useStore((state) => state.logoutpopup);
+    // const deleteEntryPopState = useStore((state) => state.deleteentrypopup);
+    // const shareEntryPopState = useStore((state) => state.shareentrypopup);
+    // const sideBarNavState = useStore((state) => state.sidebarnav);
 
     return <div className={`entrypage-container`}>
     {/* return <div className={`entrypage-container ${sideBarNavState?'entrypage-container-open':''}`}> */}
-        {logoutPopState && (<LogOutPopUp />)}
-        {deleteEntryPopState && (<DeleteEntryPopUp />)}
-        {shareEntryPopState && <SharePopUp />}
+        {/* {logoutPopState && (<LogOutPopUp />)} */}
+        <LogOutPopUp />
+        <DeleteEntryPopUp />
+        <SharePopUp />
         <SidebarEntry />
         <MainEntry />
     </div>

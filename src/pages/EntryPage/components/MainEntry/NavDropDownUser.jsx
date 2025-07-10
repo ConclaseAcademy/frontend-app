@@ -15,7 +15,7 @@ export default function NavDropDownUser({ref}){
                 <RippleEffectDropDown>
                     <p onClick={(e) => {
                         e.stopPropagation();
-                        toggleLogOutPop();
+                        toggleLogOutPop(true);
                     }}>Log Out</p>
                 </RippleEffectDropDown>
             </div>

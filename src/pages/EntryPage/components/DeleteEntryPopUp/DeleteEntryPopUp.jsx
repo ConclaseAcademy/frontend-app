@@ -5,26 +5,31 @@ import { useEffect, useRef } from "react";
 
 export default function DeleteEntryPopUp(){
     const toggleDeleteEntryPopUp = useStore((state) => state.toggleDeleteEntryPop);
+    const deleteEntryPopState = useStore((state) => state.deleteentrypopup);
 
     //   ref
     const deleteRef = useRef(null);
 
     // closing the popup when clicked on anywhere in the document
-    useEffect(() => {
-        document.addEventListener('click', (e) => {        
-            if(deleteRef.current && !deleteRef.current.contains(e.target)){
-                toggleDeleteEntryPopUp()
+    useEffect(() => {       
+          document.addEventListener('click', (e) => {        
+            // if(logoutRef.current && !logoutRef.current.contains(e.target)){
+            //     toggleLogOutPop()
+            // }
+
+             if (deleteRef.current != e.target) {
+                toggleDeleteEntryPopUp(false);
             }
         });
 
         return document.removeEventListener('click', (e) => {
-            if(deleteRef.current && !deleteRef.current.contains(e.target)){
-                toggleDeleteEntryPopUp();
+             if (deleteRef.current != e.target) {
+                toggleDeleteEntryPopUp(false);
             }
         });
     }, [])    
 
-    return <div className="deleteentrypopup-container">
+    return <div className={`deleteentrypopup-container ${deleteEntryPopState?'deleteentrypopup-container-open':''}`}>
         <div ref={deleteRef} className="deleteentrypopup-content">
             <h3>MindfulSpace says</h3>
             <p>Are you sure you want to delete this entry?</p>
