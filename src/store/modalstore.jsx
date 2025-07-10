@@ -10,3 +10,18 @@ export const useStore = create((set) => ({
   toggleShareEntryPop: (value) => set(() => ({ shareentrypopup: value })),
   sideBarNav: () => set((state) => ({ sidebarnav: !state.sidebarnav }))
 }))
+
+
+export const useStoreMeditation = create((set) => ({
+    activeCategory:"All Categories",
+    activeTime:"Any time", 
+    activeTimeRange:{lower:0, upper:0},
+    setActiveCategory: (value) => set(() => ({activeCategory:value})),
+    setActiveTime: (value) => set(() => ({activeTime:value})),
+     setActiveTimeRange: (value) => set(() => ({activeTimeRange:value})),
+}))
+
+export const useStoreMeditationTab2 = create((set) => ({
+    activeCategory:"All Stories",
+    setActiveCategory: (value) => set(() => ({activeCategory:value}))
+}))

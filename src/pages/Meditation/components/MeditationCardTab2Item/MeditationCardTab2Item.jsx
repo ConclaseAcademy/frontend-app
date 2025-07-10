@@ -1,21 +1,24 @@
-import "./MeditationCardItem.css";
+import "./MeditationCardTab2Item.css";
 import Button from "../../../../components/Button/Button";
-import MeditationCardItemIcon from "./MeditationCardItemIcon";
 import PlaySrc from "../../assets/play.svg";
 import DownloadSrc from "../../assets/downlaod.svg";
 import TimeSrc from "../../assets/clock.svg";
+import MeditationCardTab2ItemIcons from "./MeditationCardTab2ItemIcons";
 
-export default function MeditationCardItem({title, desc, author, time}){
-    return <div className="meditationcarditem-container">
+export default function MeditationCardTab2Item({title, desc, author, span, time}){
+    return <div className="meditationcardtab2item-container">
         <div style={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'18px'}}>
-            <MeditationCardItemIcon title={title} />
+            <MeditationCardTab2ItemIcons title={title} />
         </div>
         <h4>{title}</h4>
-        <p className="meditationcarditem-desc">{desc}</p>
-        <p className="meditationcarditem-author">by {author}</p>
-        <div className="meditationcarditem-time">
+        <p className="meditationcardtab2item-desc">{desc}</p>
+        <p className="meditationcardtab2item-author">by {author}</p>
+        <div className="meditationcardtab2item-time">
             <img src={TimeSrc} height={24} width={24} />
             <p>{time} minutes</p>
+        </div>
+        <div className="meditationcardtab2item-span">
+            <p>{span}</p>
         </div>
         <div style={{display:'flex', flexDirection:'row', columnGap:'10px', alignItems:'center'}}>
             <Button style={{

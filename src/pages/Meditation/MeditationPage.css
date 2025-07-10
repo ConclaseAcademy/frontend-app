@@ -127,13 +127,6 @@
 }
 
 .meditation-content-body-main{
-    /* width: 628;
-height: 362;
-justify-content: space-between;
-angle: 0 deg;
-opacity: 1;
-top: 378px;
-left: 80px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 88px;
@@ -141,9 +134,61 @@ left: 80px; */
 
 }
 
-.meditation-cards{
+.meditation-cards, .meditation-tab-2-cardlist{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
     row-gap: 20px;
+}
+
+.meditation-tab-2{
+    margin-top: 25px;
+    margin-bottom: 39px;
+}
+
+.meditation-tab-2 h3{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #080D17;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.meditation-tab-2 > p{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 20px;
+    text-align: center;
+    color: #555353;
+    margin: 0px;
+    padding: 0px;
+}
+
+.meditation-tab-2-cont{
+    border-radius: 16px;
+    padding: 24px;
+    background: #FFFFFF;
+    margin-top: 54px;
+}
+
+.meditation-tab-2-cont h3{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 24px;
+    color: #000000;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 24px;
+
+}
+
+.meditation-tab-2-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+
 }

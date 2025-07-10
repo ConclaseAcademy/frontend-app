@@ -8,12 +8,82 @@ import { navTabItemCategory } from './navTabItemCategory';
 import { timeData } from './timeData';
 import {fetchData} from './fetchData';
 import MeditationCardItem from './components/MeditationCardItem/MeditationCardItem';
+import MeditationDisplay from './components/MeditationDisplay/MeditationDisplay';
+import MeditationTab1 from './components/MeditationTab1/MeditationTab1';
+import { useStoreMeditation, useStoreMeditationTab2 } from '../../store/modalstore';
+import Tab2BedReminder from './components/Tab2BedReminder/Tab2BedReminder';
+import { categoryData2 } from './categoryDataTab2';
+import Tab2CategoryCard from './components/Tab2CategoryCard/Tab2CategoryCard';
+import MeditationTab2 from './components/MeditationTab2/MeditationTab2';
+import { fetchDataTab2 } from './fetchDataTab2';
+import MeditationCardTab2Item from './components/MeditationCardTab2Item/MeditationCardTab2Item';
+import Tab2MedicalTips from './components/Tab2MedicalTips/Tab2MedicalTips';
+import MeditationTab3 from './components/MeditationTab3/MeditationTab3';
+
 
 
 
 export default function MeditationPage(){
-    const [activeCategory, setActiveCategory] = useState("All Categories");
-    const [activeTime, setActiveTime] = useState("Any time");
+    let UI;
+
+    // tab 1 state
+    const categoryState = useStoreMeditation((state) => state.activeCategory);
+    const setCategory = useStoreMeditation((state) => state.setActiveCategory);
+    const timeState = useStoreMeditation((state) => state.activeTime);
+    const setTime = useStoreMeditation((state) => state.setActiveTime);
+    const timeRangeState = useStoreMeditation((state) => state.activeTimeRange);
+    const setTimeRange = useStoreMeditation((state) => state.setActiveTimeRange);
+
+    // Display Tab 1
+    UI = <MeditationDisplay onClick={() => {
+                setCategory("All Categories");
+                setTime("Any time")
+                setTimeRange({lower:0, upper:0})
+            }}
+            />
+
+    // simulatin fetching data based on filtering Tab 1
+    const filteredData1 = fetchData.filter(item => {
+        if(item.category == categoryState
+            || categoryState == "All Categories"){
+            return item
+        }else{
+
+        }
+    });
+
+    const filteredData2 = filteredData1.filter(item => {
+        if(item.time >= timeRangeState.lower && item.time <= timeRangeState.upper
+            || timeState == "Any time"
+        ){
+            return item
+        }else{
+            
+        }
+    });
+
+    if(filteredData2.length > 0){
+        UI = <div className='meditation-cards'>
+         {filteredData2.map(item => {
+                return <MeditationCardItem key={item.id} {...item} />
+            })}
+        </div>
+    }
+
+    // tab 2 state
+    const categoryTab2State = useStoreMeditationTab2((state) => state.activeCategory);
+    const setCategoryTab2State = useStoreMeditationTab2((state) => state.setActiveCategory);
+
+    // tab 2 filter
+    const filteredDataTab2 = fetchDataTab2.filter(item => {
+        if(item.category == categoryTab2State
+            || categoryTab2State == "All Stories"){
+            return item
+        }else{
+
+        }
+    })
+
 
     return <div className='meditation-container'>
             <div className='meditation-header'>
@@ -35,47 +105,25 @@ export default function MeditationPage(){
                 </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <div className='meditation-content-header'>
-                            <h3>Meditation Library</h3>
-                            <p>Find the perfect meditation for your needs</p>
-                        </div>
-                        <div className='meditation-main'>
-                            <div className='meditation-content-body'>
-                                <h2>Categories</h2>
-                                <div className='meditation-content-body-main'>
-                                    {categoryData.map(item => {
-                                        return <MeditationCategoryCard key={item.name} 
-                                        active={activeCategory}
-                                        {...item}
-                                        onClick={() => {
-                                            setActiveCategory(item.name)
-                                        }} />
-                                    })}
-                                </div>
-                            </div>
-                            <div className='meditation-content-body'>
-                                <h2>Duration</h2>
-                                <div className='meditation-content-body-main'>
-                                    {timeData.map(item => {
-                                        return <MeditationCategoryCard key={item.name} 
-                                        active={activeTime}
-                                        {...item}
-                                        onClick={() => {
-                                            setActiveTime(item.name)
-                                        }} />
-                                    })}
-                                </div>
-                            </div>
-                        </div>
+                        <MeditationTab1 />
+                        {UI}
+                    </TabPanel>
 
-                        <div className='meditation-cards'>
-                            {fetchData.map(item => {
-                                return <MeditationCardItem key={item.id} {...item} />
+                    <TabPanel>
+                        <MeditationTab2 />
+                        <div className='meditation-tab-2-cardlist'>
+                            {filteredDataTab2.map(item => {
+                                return <MeditationCardTab2Item key={item.id} {...item} />
                             })}
                         </div>
+                        <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+                            <Tab2MedicalTips />
+                        </div>
                     </TabPanel>
-                    <TabPanel> cont 2</TabPanel>
-                    <TabPanel> cont 3</TabPanel>
+
+                    <TabPanel> 
+                        <MeditationTab3 />
+                    </TabPanel>
                 </TabPanels>
             </TabGroup>
         </div>
