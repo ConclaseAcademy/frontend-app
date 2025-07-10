@@ -1,4 +1,4 @@
-import moonSrc from "../../assets//moontab2.svg";
+import moonSrc from "../../assets/moontab2.svg";
 import loveSrc from "../../assets/lovetab2.svg";
 
 

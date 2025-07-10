@@ -8,7 +8,7 @@ import ProfilePage from './pages/ProfilePage/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
 import ReminderPage from './pages/ReminderPage/ReminderPage';
 import DeletePage from './pages/DeleteAccount/DeleteAccount';
-import MeditationPage from './pages/Meditation/MeditationPage';
+import MeditationPage from './pages/MeditationPage/MeditationPage';
 import JournalPage from './pages/JournalPage/JournalPage';
 
 

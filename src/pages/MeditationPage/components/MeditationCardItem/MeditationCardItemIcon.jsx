@@ -1,4 +1,4 @@
-import MorningSrc from "../../assets//morning.svg";
+import MorningSrc from "../../assets/morning.svg";
 import StressSrc from "../../assets/stress.svg";
 import DeepSrc from "../../assets/deep.svg";
 import AnxietySrc from "../../assets/anxiety.svg";
