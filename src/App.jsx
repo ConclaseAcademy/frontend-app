@@ -9,6 +9,7 @@ import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
 import ReminderPage from './pages/ReminderPage/ReminderPage';
 import DeletePage from './pages/DeleteAccount/DeleteAccount';
 import MeditationPage from './pages/Meditation/MeditationPage';
+import JournalPage from './pages/JournalPage/JournalPage';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/reminder" element={<ReminderPage />} />
           <Route path="/delete-account" element={<DeletePage />} />
           <Route path="/meditation" element={<MeditationPage />} />
+          <Route path="/journal" element ={<JournalPage/>}/>
         </Routes>
 
     

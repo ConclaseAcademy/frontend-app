@@ -1,0 +1,49 @@
+.entry-top {
+  display: flex;
+ gap: 800px;
+  border-bottom: 1px solid black;
+  align-items: center;
+}
+.entry-header {
+  font-weight: 500;
+  size: 20px;
+  line-height: 150%;
+}
+.entry-select {
+  padding: 5px;
+  height: 4vh;
+  background: none;
+  outline: none;
+  border: none;
+}
+.entry-items {
+  display: flex;
+  gap: 650px;
+  
+}
+
+.entry {
+  margin: auto 200px;
+}
+.date-entry {
+  color: #837f7f;
+}
+
+.box {
+  width: 23.33px;
+  height: 23.33px;
+  top: 8.33px;
+  background-color: #837f7f;
+  left: 8.33px;
+}
+.entry-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.entry-bottom{
+  margin: auto -40px;
+}
+.small {
+  font-size: 20px;
+}
