@@ -3,11 +3,17 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
+import GetStartedPage from './pages/getstartedpage/getstartedpage';
+import GetStartedPage2 from './pages/getstartedpage/getstartedpage2';
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/GetStartedPage" element={<GetStartedPage/>} />
+        <Route path="/GetStartedPage2" element={<GetStartedPage2/>} />
+    
+
         <Route path="/" element={<LandingPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
