@@ -5,7 +5,8 @@ export const SidebarNavItem = [
     },
     {
         id:1,
-        navlink:'Mood Check in'
+        navlink:'Mood Check in',
+        link:'mood'
     },
     {
         id:2,

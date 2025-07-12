@@ -5,7 +5,7 @@ import { useState } from "react";
 import NoEntries from "./NoEntries";
 
 export default function EntrySection() {
-  const [entries,setEntries] = useState(0)
+  const [entries,setEntries] = useState(1)
   return (
     <>
     {entries < 1 ?  (

@@ -1,0 +1,32 @@
+.moodtrackerpage-container{
+    text-align: center;
+    flex-grow: 1;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+}
+
+.moodtrackerpage-container h3{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 18px;
+    color: #6D6868;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+
+}
+
+.moodtrackerpage-content{
+    background: #FFFFFF;
+    /* width: 1100; */
+    /* height: 773px; */
+    /* angle: 0 deg;
+    opacity: 1;
+    top: 222px;
+    left: 310px;  */
+    /* border-width: 1px; */
+    border: 1px solid #EFE1E1;
+}

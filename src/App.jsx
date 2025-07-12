@@ -10,6 +10,8 @@ import ReminderPage from './pages/ReminderPage/ReminderPage';
 import DeletePage from './pages/DeleteAccount/DeleteAccount';
 import MeditationPage from './pages/MeditationPage/MeditationPage';
 import JournalPage from './pages/JournalPage/JournalPage';
+import MainDashboard from './pages/DashboardPage/components/MainDashboard/MainDashboard';
+import MoodTrackerPage from './pages/MoodTrackerPage/MoodTrackerPage';
 
 
 function App() {
@@ -30,7 +32,10 @@ function App() {
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/entry" element={<EntryPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="dashboard" element={<DashboardPage />} >
+            <Route index element={<MainDashboard />} />
+            <Route path='mood' element={<MoodTrackerPage />} />
+          </Route>
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/privacy-settings" element={<PrivacyPage />} />
           <Route path="/reminder" element={<ReminderPage />} />
