@@ -45,11 +45,17 @@ function App() {
         </Routes>
 
     
-        <div style={{ position: 'fixed', bottom: '20px', left: '10px', display: 'flex', gap: '20px' }}>
+        <div 
+        style={{ position: 'fixed', bottom: '20px', 
+        left: '10px', display: 'flex', padding:'20px',
+        gap: '20px', background:'whitesmoke' }}>
           <NavLink to="/signin">Sign In Page</NavLink>
           <NavLink to="/signup">Sign Up Page</NavLink>
           <NavLink to="/dashboard">Dashboard Page</NavLink>
-          <NavLink to="/journal">Journal Entry Page</NavLink>
+          <NavLink to="/journal">Journal Page</NavLink>
+          <NavLink to="/entry">Entry Page</NavLink>
+          <NavLink to="/profile">Profile Page</NavLink>
+          <NavLink to="/meditation">Meditation Page</NavLink>
         </div>
     </>
   );
