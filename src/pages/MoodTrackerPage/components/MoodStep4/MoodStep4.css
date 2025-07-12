@@ -1,0 +1,58 @@
+.moodstep4-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9px;
+    margin-bottom: 104px;
+    position: relative;
+}
+
+.moodstep4-container h4{
+    margin: 0px;
+    padding: 0px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+    color: #000000;
+    width: 512px;
+    margin-bottom: 46px;
+
+}
+
+.moodstep4-container h5{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 500;
+    font-style: medium;
+    font-size: 20px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.moodstep4-emoji-cont{
+    /* width: 348;
+    height: 374; */
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #9792929E;
+}
+
+
+.moodstep4-emoji{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 38.65px;
+    row-gap: 30px;
+}
+
+.moodstep4-emoji img{
+    cursor: pointer;
+}
+
+/* .moodstep3-emoji img:hover{
+    /* bac 
+} */

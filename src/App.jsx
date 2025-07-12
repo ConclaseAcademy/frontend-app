@@ -3,30 +3,54 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
-import GetStartedPage from './pages/getstartedpage/getstartedpage';
-import GetStartedPage2 from './pages/getstartedpage/getstartedpage2';
+import EntryPage from './pages/EntryPage/EntryPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
+import ReminderPage from './pages/ReminderPage/ReminderPage';
+import DeletePage from './pages/DeleteAccount/DeleteAccount';
+import MeditationPage from './pages/MeditationPage/MeditationPage';
+import JournalPage from './pages/JournalPage/JournalPage';
+import MainDashboard from './pages/DashboardPage/components/MainDashboard/MainDashboard';
+import MoodTrackerPage from './pages/MoodTrackerPage/MoodTrackerPage';
+
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/GetStartedPage" element={<GetStartedPage/>} />
-        <Route path="/GetStartedPage2" element={<GetStartedPage2/>} />
-    
-
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/signin" element={<SignInPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-      </Routes>
-      
 
       {/* You can comment out if it is hinder  */}
-      <div style={{position:'fixed', bottom:'20px', left:'10px', display:'flex', gap:'20px'}}>
+      {/* <div style={{position:'fixed', bottom:'20px', left:'10px', display:'flex', gap:'20px'}}>
         <NavLink to="/signin">Sign In Page</NavLink>
         <NavLink to="/signup">Sign Up Page</NavLink>
         <NavLink to="/dashboard">Dashboard Page</NavLink>
-      </div>
+        <NavLink to="/entry">Entry Page</NavLink>
+        <NavLink to="/journal">Journal Page</NavLink>
+        <NavLink to="/getstartedpage">GetStarted Page</NavLink>
+      </div> */}
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/entry" element={<EntryPage />} />
+          <Route path="dashboard" element={<DashboardPage />} >
+            <Route index element={<MainDashboard />} />
+            <Route path='mood' element={<MoodTrackerPage />} />
+          </Route>
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/privacy-settings" element={<PrivacyPage />} />
+          <Route path="/reminder" element={<ReminderPage />} />
+          <Route path="/delete-account" element={<DeletePage />} />
+          <Route path="/meditation" element={<MeditationPage />} />
+          <Route path="/journal" element ={<JournalPage/>}/>
+        </Routes>
+
+    
+        <div style={{ position: 'fixed', bottom: '20px', left: '10px', display: 'flex', gap: '20px' }}>
+          <NavLink to="/signin">Sign In Page</NavLink>
+          <NavLink to="/signup">Sign Up Page</NavLink>
+          <NavLink to="/dashboard">Dashboard Page</NavLink>
+          <NavLink to="/journal">Journal Entry Page</NavLink>
+        </div>
     </>
   );
 }

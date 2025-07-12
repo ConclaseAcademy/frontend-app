@@ -1,0 +1,40 @@
+.navdropdownuser-container{
+    /* width: 178;
+    height: 118;
+    top: -9668px;
+    left: -16517px;
+    gap: 10px; */
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    border-radius: 16px;
+    position:absolute;
+    top:60px;
+    left:0px;
+    background: #FFFFFF;
+    /* background:red */
+    box-shadow: 1px 2px 2px black;
+}
+
+.navdropdownuser-container p{
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width:800px){
+    .navdropdownuser-container{
+        top:50px;
+        left:-20px;
+    }
+
+}
+
+@media (max-width:400px){
+    .navdropdownuser-container{
+        /* top:60px; */
+        left:-30px;
+    }
+
+}

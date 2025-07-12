@@ -1,13 +1,123 @@
 .maindashboard-container{
-    
-    padding-left: 56px;
-    padding-top: 59px;
+    /* background: rebeccapurple; */
+    height: 100%;
+    /* background: #E1E8FB; */
+    padding-left: 39px;
+    /* padding-top: 38px; */
     flex-grow: 1;
-    padding-right: 98px;
+    padding-right: 84px;
+    /* position: absolute;
+    right: 0px;
+    top: 0px; */
+    background: #E6EBF3;
+    padding-bottom: 49.05px;
+    /* background-color: red; */
+}
+
+.maindashboard-p-1{
+    margin-top: 50px;
+    margin-bottom:8px;
+    font-weight: 600;
+    font-size: 24px;
+    color:#080D17;
+;
+}
+
+.maindashboard-p-2{
+    margin-bottom:32px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+
+
 }
 
 .maindashboard-status{
     display: flex;
     flex-direction: row;
     column-gap: 24px;
+}
+
+.maindashboard-mid{
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    /* background-color: aqua; */
+    /* align-items: center; */
+    justify-content: center;
+    /* background-color: red; */
+    margin-bottom: 23px;
+
+}
+
+.maindashboard-piestatus{
+    display: flex;
+    flex-direction: row;
+    /* display: grid;
+    grid-template-columns: 2fr 1.5fr; */
+    column-gap: 24px;
+    /* background-color: aqua; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-bottom: 23px;
+    /* background: red; */
+    /* height: 257px; */
+}
+
+.maindashboard-todaysactivity{
+    border-radius: 16px;
+    /* padding-top: 58.5px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px; */
+    background: #FFFFFF;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 250px; */
+    /* width: 277px; */
+    width: 100%;
+
+}
+
+.maindashboard-footer{
+/* width: 1024;
+height: 78.94190979003906; */
+/* gap: 8px; */
+    border-radius: 16px;
+    border-width: 1px;
+    padding-top: 14.94px;
+    /* padding-right: 16px; */
+    padding-bottom: 12px;
+    padding-left: 16px;
+    background: #C2D6FD;
+    border: 1px solid #0D2555
+
+}
+
+.maindashboard-footer-up{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4px;
+    margin-bottom: 8px;
+}
+
+.maindashboard-footer-up h4{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #080D17;
+
+}
+
+.maindashboard-footer-down span{
+    font-weight: 400;
+    font-size: 14px;
+    color:#000000;
 }

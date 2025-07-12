@@ -1,0 +1,24 @@
+.rippleeffectdropdown-container{
+    background-position: center;
+    transition: background 0.8s opacity 0.8s;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.rippleeffectdropdown-container:hover{
+    /* background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5) center/15000%; */
+    background: rgba(0, 0, 0, 0.125);
+}
+
+.rippleeffectdropdown-container:active, .rippleeffectdropdown-container:focus{
+    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: #6eb9f7; */
+    background-size: 100%;
+    transition: background 0s opacity 0s;
+    opacity: 0.5;
+}

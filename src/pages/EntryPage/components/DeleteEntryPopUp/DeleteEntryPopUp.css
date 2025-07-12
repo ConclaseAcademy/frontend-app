@@ -1,0 +1,85 @@
+.deleteentrypopup-container{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    margin: auto;
+    height: 100%; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    overflow: auto;
+}
+
+.deleteentrypopup-content{   
+    position: relative;
+    margin: auto;
+    border: 1px solid #888;
+    padding-top: 36px;
+    padding-right: 2%;
+    padding-bottom: 36px;
+    padding-left: 2%;
+    border-radius: 16px;
+    background: #040F25;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: anime;
+    -webkit-animation-duration: 0.4s;
+    animation-name: anime;
+    animation-duration: 0.4s
+}
+
+.deleteentrypopup-container-open{
+    display: flex !important;
+}
+
+/* .deleteentrypopup-container-close{
+    display: none!important;
+}
+
+.deleteentrypopup-content-close{
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: anime;
+    animation-duration: 0.4s
+} */
+
+/* Add Animation */
+@-webkit-keyframes anime {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes anime {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.deleteentrypopup-content h3{
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 24px;
+}
+
+.deleteentrypopup-content p{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 75px;
+}
+
+
+.deleteentrypopup-btncontainer{
+    margin-left:153px;
+    display:flex;
+    flex-direction:row;
+    column-gap:16px;
+}
+
+@media (max-width:800px){
+    .deleteentrypopup-btncontainer{
+        margin-left:1px;
+        column-gap:5px;
+    }
+}

@@ -11,6 +11,13 @@ node_modules
 dist
 dist-ssr
 *.local
+# src/components/Footer
+# src/pages/LandingPage/components/CTA
+# src/pages/LandingPage/components/HowItWorks
+# src/pages/LandingPage/components/Testimonies
+
+# src/pages/SignInPage
+# src/pages/SignUpPage
 
 # Editor directories and files
 .vscode/*

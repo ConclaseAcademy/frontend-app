@@ -1,0 +1,22 @@
+
+.meditationcategorycard-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    border-width: 1px;
+    padding: 16px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    border: 1px solid #6A6A6ACC;
+    /* width:238px; */
+    cursor: pointer;
+
+}
+
+.meditationcategorycard-content-active{
+    background: #080D17;
+    color: #FFFFFF;
+}

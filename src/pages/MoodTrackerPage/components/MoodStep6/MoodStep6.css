@@ -1,0 +1,178 @@
+.moodstep6-container{
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 94px;
+    background: url("../../assets/bgmoodstep6.jpg");
+}
+
+.moodstep6-container h3{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 36px;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.moodstep6-container h4{
+    font-weight: 600;
+    /* font-style: semibold; */
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 41px;
+
+}
+
+.moodstep6-visual-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 11px;
+}
+
+.moodstep6-visual-cont-span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3px;
+}
+
+.moodstep6-visual-cont-span label{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.moodstep6-visual-cont-span div{
+    width: 41px;
+    height: 40px;
+    background: #DDDDDD;
+    border-radius: 50%;
+
+}
+
+
+.moodstep6-visual-today-label{
+    border: 1px solid #000000;
+    border-radius: 40px;
+    border-width: 1px;
+    padding: 0px 12px !important;
+
+}
+
+.moodstep6-visual-today-div{
+    background: #1A3467 !important;
+}
+
+
+.moodstep6-mid1{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 21px;
+}
+
+.moodstep6-mid1-span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+
+
+}
+
+.moodstep6-mid1-span p{
+    margin:0px;
+    padding: 0px;
+}
+
+.moodstep6-program{
+    margin-top: 55px;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 380px;
+    /* width: 352px; */
+}
+
+.moodstep6-program h4{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+    font-style: semibold;
+    font-size: 20px;
+    color: #000000;
+
+    text-align: left !important;
+    margin-bottom: 28px;
+
+}
+
+.moodstep6-program-card{
+    /* width: 352px; */
+    /* height: 103; */
+    border-radius: 10px;
+    border-width: 1px;
+    padding-top: 16px;
+    padding-right: 12px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    background: #FDFDFD;
+    border: 1px solid #9792929E;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    /* align-items: center; */
+}
+
+.moodstep6-program-card-title{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 15px;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 13px;
+}
+
+.moodstep6-program-card-detail{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-items: center;
+    column-gap: 6px;
+}
+
+.moodstep6-program-card-detail p{
+    margin: 0px;
+    padding: 0px;
+
+    font-weight: 500;
+    font-style: medium;
+    font-size: 15px;
+    color: #736D6D;
+
+}

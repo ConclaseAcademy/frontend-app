@@ -13,6 +13,7 @@
     align-items: center;
     border-radius: 24px;
     gap: 0px !important;
+    transition: background-color 0.4s, color 0.4s;
 
 }
 
@@ -28,4 +29,10 @@
 
 .everythingcard-conatainer p{
     font-weight: 400;
+}
+
+
+.everythingcard-container:hover{
+    background-color: #01143B;
+    color: white;
 }

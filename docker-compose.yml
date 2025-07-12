@@ -1,0 +1,9 @@
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "8080:80"
+    container_name: frontend-test
+    environment:
+      - NODE_ENV=development

@@ -1,0 +1,177 @@
+.sharepopup-container{
+    position: absolute;
+    /* position: fixed; */
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    margin: auto;
+    height: 100%; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    /* width: 323px; */
+}
+
+.sharepopup-content{
+    background: #CFDDF2;
+    width: 42%;
+    border-radius: 16px;
+    padding-top: 36px;
+    padding-right: 2%;
+    padding-bottom: 36px;
+    padding-left: 2%;
+    position: relative;
+    margin: auto;
+    border: 1px solid #888;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: anime;
+    -webkit-animation-duration: 0.4s;
+    animation-name: anime;
+    animation-duration: 0.4s
+}
+
+.sharepopup-container-open{
+    display: flex !important;
+}
+
+/* Add Animation */
+@-webkit-keyframes anime {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes anime {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.sharepopup-content h3{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.sharepopup-tab{
+    display: flex;
+    flex-direction: row;
+    column-gap: 4%;
+    /* column-gap: 40px; */
+    margin-bottom: 40px;
+}
+
+/* .sharepopup-tab-1{
+    
+} */
+
+.sharepopup-tab-1 p{
+    margin-bottom: 17px;
+}
+
+.sharepopup-urlgenerate{
+    /* width: 512;
+    height: 199; */
+    border-radius: 16px;
+    padding-top: 24px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    /* gap: 10px;
+    angle: 0 deg;
+    opacity: 1; */
+    /* border: 2px solid red; */
+    border: 2px solid #808080;
+    border-style: dashed;
+    /* dashes: 10, 10; */
+    background: #FFFFFF;
+}
+
+.sharepopup-urlgenerate > p{
+    /* font-family: Poppins; */
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    text-align: center;
+    color: #0E5CF9;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+
+}
+
+.sharepopup-formcontrol{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 40px;
+}
+
+.sharepopup-formcontrol label{
+    font-weight: 400;
+    font-style:normal;
+    font-size: 16px;
+}
+
+.sharepopup-formcontrol input{
+    /* width: 512;
+height: 72; */
+    border-radius: 16px;
+    padding-top: 24px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    /* gap: 10px;
+    angle: 0 deg;
+    opacity: 1; */
+    border-width: 1px;
+    background: #FFFFFF;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.sharepopup-formcontrol input::placeholder{
+    color: #8A8A8A70;
+}
+
+.sharepopup-formcontrol textarea{
+    /* width: 512; */
+    height: 181px;
+    border-radius: 19px;
+    padding-top: 24px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    /* gap: 10px;
+    angle: 0 deg;
+    opacity: 1; */
+    border-width: 1px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.sharepopup-formcontrol textarea::placeholder{
+    color: #8A8A8A70;
+}
+
+
+@media (max-width:800px){
+    .sharepopup-content{
+        width: 60%;
+    }
+}
+
+
+@media (max-width:500px){
+    .sharepopup-content{
+        width: 80%;
+    }
+}
+
+@media (max-width:500px){
+    .sharepopup-content{
+        width: 90%;
+    }
+}

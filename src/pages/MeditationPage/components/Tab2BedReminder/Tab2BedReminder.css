@@ -1,0 +1,32 @@
+.tab2bedreminder-container{
+    border-radius: 16px;
+    padding: 24px;
+    background: #0E5CF9;
+    margin-top: 39px;
+}
+
+.tab2bedreminder-container div h4{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tab2bedreminder-container div img{
+    height: 30px;
+    width: 30px;
+}
+
+.tab2bedreminder-container p{
+    font-weight: 500;
+    /* font-style: Medium; */
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 47px;
+
+}

@@ -1,0 +1,21 @@
+.items-none-info{
+    background-color: rgba(0, 0, 0, 0.788);
+    padding: 0 150px;
+}
+
+.info-wrapper{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+}
+.entries-wrapper{
+    width: 100%;
+ 
+}
+.align-items{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

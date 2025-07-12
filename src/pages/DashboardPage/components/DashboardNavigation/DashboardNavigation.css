@@ -1,14 +1,14 @@
 .dashboardnavigation-container{
     /* width: 1440;
 height: 88; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding-top: 12px;
     padding-right: 24px;
     padding-bottom: 12px;
     padding-left: 24px;
-    background: #0D2555;
+    /* background: #0D2555; */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .dashboardnaviagtion-navitem{
@@ -17,4 +17,21 @@ height: 88; */
     column-gap: 24px;
     list-style-type: none;
     color: white;
+    align-items: center;
+}
+
+.dashboardnaviagtion-navitem-lang{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 8px;
+    color: #040F25;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+
+
+    /* align-items: center; */
+    /* justify-content: flex-start; */
+    /* background-color: red; */
 }

@@ -1,0 +1,27 @@
+.moodtrackeruser-container{
+    /* background-color: red; */
+    padding: 18px 30px;
+}
+
+
+
+.moodtrackeruser-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: blue; */
+    text-align: center;
+    column-gap: 8px;
+}
+
+.moodtrackeruser-content p{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+
+}

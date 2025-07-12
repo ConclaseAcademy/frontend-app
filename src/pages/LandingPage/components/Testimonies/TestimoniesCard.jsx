@@ -1,0 +1,15 @@
+import "./TestimoniesCard.css";
+import TestimoniesImage from "./TestimoniesImage";
+
+export default function TestimoniesCard({id, name, role, country, desc}){
+    console.log("test : ", id, typeof id)
+    return <div className="testimoniescard-container">
+        <div className="testimoniescard-content">
+            <TestimoniesImage id={id}  />
+            <h5>{name}</h5>
+            <h5>{role}</h5>
+            <h6>{country}</h6>
+        </div>
+        <div className="testimonies-hover">{desc}</div>
+    </div>
+}
