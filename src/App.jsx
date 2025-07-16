@@ -12,6 +12,8 @@ import MeditationPage from './pages/MeditationPage/MeditationPage';
 import JournalPage from './pages/JournalPage/JournalPage';
 import MainDashboard from './pages/DashboardPage/components/MainDashboard/MainDashboard';
 import MoodTrackerPage from './pages/MoodTrackerPage/MoodTrackerPage';
+import GetStartedPage from './pages/getstartedpage/getstartedpage';
+import GetStartedPage2 from './pages/getstartedpage/getstartedpage2';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
           <Route path="/delete-account" element={<DeletePage />} />
           <Route path="/meditation" element={<MeditationPage />} />
           <Route path="/journal" element ={<JournalPage/>}/>
+          <Route path="/getstarted" element ={<GetStartedPage/>}/>
+          <Route path="/getstarted2" element ={<GetStartedPage2/>}/>
         </Routes>
 
     
@@ -56,6 +60,8 @@ function App() {
           <NavLink to="/entry">Entry Page</NavLink>
           <NavLink to="/profile">Profile Page</NavLink>
           <NavLink to="/meditation">Meditation Page</NavLink>
+          <NavLink to="/getstarted">GetStarted Page</NavLink>
+          <NavLink to="/getstarted2">GetStarted 2 Page</NavLink>
         </div>
     </>
   );
