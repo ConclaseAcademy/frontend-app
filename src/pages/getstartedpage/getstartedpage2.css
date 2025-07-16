@@ -1,0 +1,111 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      width: 1440px;
+      height: 1024px;
+      background-color: #1E3B6E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 874px;
+      height: 801px;
+      background-color: #FFFFFF;
+      border-radius: 16px;
+      padding: 98px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 40px;
+    }
+
+    .top-text {
+      text-align: center;
+    }
+
+    .top-text h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1E3B6E;
+      margin-bottom: 20px;
+    }
+
+    .top-text p {
+      font-size: 14px;
+      font-weight: 500;
+      color: #8F8C81;
+    }
+
+    .progress-bar {
+      width: 543px;
+      height: 6px;
+      background: linear-gradient(to right, #56B2F9, #8624CB);
+      border-radius: 3px;
+      margin-top: 20px;
+    }
+
+    .content {
+      width: 543px;
+      height: 299px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 50px;
+    }
+
+    .success-message {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 100px;
+    }
+
+    .success-message h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #080D17;
+    }
+
+    .success-message p {
+      font-size: 16px;
+      font-weight: 500;
+      color: #8F8C81;
+      width: 100%;
+      max-width: 543px;
+      line-height: 1.4;
+    }
+
+    .continue-button {
+      width: 295px;
+      height: 56px;
+      background-color: #1A3467;
+      border: 2px solid #FFFFFF;
+      border-radius: 50px;
+      padding: 12px 24px 12px 24px;
+      color: #FFFFE3;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      margin-top: 180px;
+    }
+
+    .continue-button:hover {
+      background-color: #25447F;
+    }
