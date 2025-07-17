@@ -8,7 +8,7 @@ export default function EntrySection() {
   const [entries,setEntries] = useState(1)
   return (
     <>
-    {entries < 1 ?  (
+    {entries < 2 ?  (
 <NoEntries/>
     ):(
       <>
