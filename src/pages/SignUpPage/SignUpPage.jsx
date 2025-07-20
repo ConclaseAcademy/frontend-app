@@ -1,35 +1,81 @@
-import { NavLink, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import Button from "../../components/Button/Button";
 import InputControl from "../../components/InputControl/InputControl";
 import Logo from "../../components/Logo/Logo";
+import { toast } from 'react-toastify';
 import "./SignUpPage.css";
 import GoogleImgSrc from "./assets/google.svg";
 import { formInputControlData } from "./SignUpPageFormData";
 import Linebreak from "./components/Linebreak";
 import signUpImgSrc from "./assets/signup.svg";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
+import Loader from "../../components/Loader/Loader";
 
 
 export default function SignUpPage(){
+    const formRef = useRef(null);
     const navigate = useNavigate();
 
     // the state
     const [formData, setFormData] = useState({
         name:'',
         email:'',
-        password:''
+        password:'',
+        term:false
     });
+
+    const [error, setError] = useState({
+        name:'',
+        email:'',
+        password:'',
+        term:false
+    });
+
+    const [loader, setLoader] = useState(false);
+
+    // validation
+    function validateInput(){
+        let isValid = true
+
+        const newErr = {
+            name:'',
+            email:'',
+            password:'',
+            term:false
+        }
+
+        if(formData.name == ""){
+            newErr.name = "Name can't be Empty!";
+            isValid = false;
+        }else if(formData.email == ""){
+            newErr.email = "Email can't be Empty!";
+            isValid = false;
+        } else if(formData.password == ""){
+            newErr.password = "Password can't be Empty!";
+            isValid = false;
+        } else if(!formData.term){
+            newErr.term = "You must agree to the terms and conditions!"
+            isValid = false;
+        }
+        setError(newErr);
+
+        return isValid;
+    }
 
     // handlers
     function onChangeHandler(e){
-        const {name, value} = e.target;
-        const newState = {...formData, [name]:value};
+        const {name, value, checked} = e.target;
+        const valueInput = name=="term"?checked:value;
+        const newState = {...formData, [name]:valueInput};
         setFormData(newState);
     }
 
-    function onSubmitHandler(e){
+    async function onSubmitHandler(e){
         e.preventDefault();
+        const isValid = validateInput();
+        if(!isValid) return;
+
         const data = {};
         const fullName = formData.name.split(" ");
         const firstName = fullName[0];
@@ -38,25 +84,28 @@ export default function SignUpPage(){
         data.lastName = lastName;
         data.emailAddress = formData.email;
         data.password = formData.password;
-        // data.role = "SuperAdmin"
-        console.log("what data: ", data)
 
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com'
+        // set loader
+        setLoader(true);
 
-        // console.log("What I submitted: ", data);
-        // console.log("What I submitted: ", typeof fullName, firstName, lastName);
-        // axios.post('http://135.119.224.168:8000/api/v1/Authentication/register?role=SuperAdmin',
-        axios.post('/api/v1/Authentication/register?role=SuperAdmin',
-        // axios.post(proxyUrl + 'http://135.119.224.168:8000/api/v1/Authentication/register?role=SuperAdmin',
+        axios.post('http://135.119.224.168:8000/api/v1/Authentication/register?role=RegularUser',
             data, {
             headers:{
                 "Accept":"*/*",
                 "Content-Type":'application/json'
             }
         }).then((res) => {
-            console.log("Response: ", res)
+            if(res.status == 200){
+                toast.success("Registration successful!");
+                setTimeout(() => {
+                    navigate('/signin')
+                }, 3000)
+            }
         }).catch((err) => {
             console.log("The Error: ", err)
+            toast.error(err.message || "Registration failed.");
+        }).finally(() => {
+            setLoader(false)
         })
     }
 
@@ -93,7 +142,7 @@ export default function SignUpPage(){
 
 
 
-            <form onSubmit={onSubmitHandler}>            
+            <form ref={formRef} onSubmit={onSubmitHandler}>            
                 <Linebreak />
                 {formInputControlData.map(formcontrol => {
                     return <InputControl 
@@ -102,6 +151,8 @@ export default function SignUpPage(){
                     {...formcontrol} 
                     onChange={onChangeHandler}
                     value={formData[formcontrol.name]}
+                    checked={formcontrol.name == "term"?formData[formcontrol.name]:null}
+                    error={error[formcontrol.name]}
                     />
                 })}
                 <Button 
@@ -112,10 +163,16 @@ export default function SignUpPage(){
                             border: "1px solid #080D17",
                             marginBottom:'12px',
                             color: "#fffff",
-                            fontWeight: "600",
-                            fontSize: "15px",
+                            display:'flex',
+                            flexDircetion:'row',
+                            alignItems:'center',
+                            justifyContent:'center',
+                            columnGap:'10px'
                             }}>
-                    Sign Up
+                            <span style={{
+                                    fontWeight: "600",
+                                    fontSize: "15px"}}>Sign Up</span>
+                    {loader?<Loader />:null}
                 </Button>
                 <p style={{margin:'0px', marginTop:'-6px'}}>Already have an account? 
                     <span style={{color:"#080D17", cursor:'pointer'}} 

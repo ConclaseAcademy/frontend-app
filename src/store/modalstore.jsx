@@ -1,4 +1,6 @@
-import { create } from 'zustand'
+import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware'
+
 
 export const useStore = create((set) => ({
   logoutpopup: false,
@@ -18,10 +20,25 @@ export const useStoreMeditation = create((set) => ({
     activeTimeRange:{lower:0, upper:0},
     setActiveCategory: (value) => set(() => ({activeCategory:value})),
     setActiveTime: (value) => set(() => ({activeTime:value})),
-     setActiveTimeRange: (value) => set(() => ({activeTimeRange:value})),
+    setActiveTimeRange: (value) => set(() => ({activeTimeRange:value})),
 }))
 
 export const useStoreMeditationTab2 = create((set) => ({
     activeCategory:"All Stories",
     setActiveCategory: (value) => set(() => ({activeCategory:value}))
 }))
+
+export const loginData = create()(
+        persist(
+        (set, get) => ({
+            role: "",
+            token:'',
+            updateRole: (newRole) => set(() => ({ user: newRole })),
+            updateToken: (newToken) => set(() => ({ token: newToken }))
+        }),
+        {
+            name:'user',
+            storage:createJSONStorage(()=> sessionStorage)
+        }
+    )
+)

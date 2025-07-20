@@ -24,7 +24,7 @@ export const formInputControlData = [
         id:3,
         label:"I agree to all terms and privacy conditions",
         type:"checkbox",
-        name:"switch"
+        name:"term"
         // placeholder:"Forgot password?"
     }
 ]

@@ -3,8 +3,17 @@ import hourglassUrl from '../../assets/images/hourglass.svg'
 import googleUrl    from '../../assets/images/google.svg'
 import logoUrl      from '../../assets/images/logo.svg'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { toast } from 'react-toastify'
+import Loader from '../../components/Loader/Loader'
+import { loginData } from '../../store/modalstore'
 
 export default function SignInPage() {
+
+  // getting the slice of the state
+  const newToken = loginData((state)=>state.updateToken);
+  const newRole = loginData((state)=>state.updateRole);
+
   // 1️⃣ track window width & determine device
   const [width, setWidth] = useState(window.innerWidth)
   useEffect(() => {
@@ -25,6 +34,7 @@ export default function SignInPage() {
   const [password, setPassword] = useState('')
   const [stay, setStay]         = useState(false)
   const [errors, setErrors]     = useState({})
+  const [loader, setLoader] = useState(false)
   const validate = () => {
     const e = {}
     if (!/^\S+@\S+\.\S+$/.test(email)) e.email = 'Invalid email'
@@ -36,7 +46,33 @@ export default function SignInPage() {
     ev.preventDefault()
     if (validate()) {
       console.log({ email, password, stay })
+      const data = {email, password}
       // TODO: call your auth API...
+      setLoader(true)        
+      axios.post('http://135.119.224.168:8000/api/v1/Authentication',
+            data, {
+            headers:{
+                "Accept":"*/*",
+                "Content-Type":'application/json'
+            }
+        }).then((res) => {
+            if(res.status == 200){
+                toast.success("Login successful!");
+                // save it in the store
+                console.log("Login Success: ", res.data.data)
+                newRole(res.data.data.role)
+                newToken(res.data.data.token)
+                setTimeout(() => {
+                    navigate('/dashboard')
+                }, 3000)
+            }
+        }).catch((err) => {
+            console.log("The Error: ", err)
+            toast.error(err.message || "Login failed.");
+        }).finally(() => {
+            setLoader(false)
+        })
+      
     }
   }
 
@@ -269,7 +305,8 @@ export default function SignInPage() {
           </div>
 
           <button type="submit" style={{ ...S.btn, ...S.primary }} className="btn-login">
-            Log in
+            <span style={{marginRight:'10px'}}>Log in</span>
+            {loader && <Loader />}
           </button>
 
           <button

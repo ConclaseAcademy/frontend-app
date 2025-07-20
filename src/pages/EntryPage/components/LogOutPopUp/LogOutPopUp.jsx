@@ -1,6 +1,6 @@
 import Button from "../../../../components/Button/Button";
 import "./LogOutPopUp.css";
-import { useStore } from "../../../../store/modalstore";
+import { loginData, useStore } from "../../../../store/modalstore";
 import { useEffect, useRef } from "react";
 
 export default function LogOutPopUp(){
@@ -8,7 +8,9 @@ export default function LogOutPopUp(){
 
     const toggleLogOutPopUp= useStore((state) => state.toggleLogOutPop);
     const logoutPopState = useStore((state) => state.logoutpopup);
-
+      const updateToken = loginData((state) => state.updateToken);
+      const updateRole = loginData((state) => state.updateRole)
+    
     // closing the popup when clicked on anywhere in the document
     useEffect(() => {
         document.addEventListener('click', (e) => {        
@@ -62,6 +64,10 @@ export default function LogOutPopUp(){
                             fontWeight: "700",
                             fontSize: "16px",
                             color:'#5A1A19'
+                        }}
+                        onClick={() => { 
+                            updateToken('');
+                            updateRole('');
                         }}
                     >
                         OK
