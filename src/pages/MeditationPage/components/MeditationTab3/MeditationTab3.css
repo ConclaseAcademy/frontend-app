@@ -1,0 +1,83 @@
+.meditationtab3-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.meditationtab3-container h3{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #080D17;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 45.2px;
+
+}
+
+.meditationtab3-container p{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 20px;
+    text-align: center;
+    color: #555353;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+
+}
+
+.meditationtab3-container > img{
+    width: 300px;
+    height: 300px;
+    margin-top: 45.2px;
+    margin-bottom: 45.2px;
+}
+
+.meditationtab3-container div h4{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 24px;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 8px;
+}
+
+.meditationtab3-container div p{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 24px;
+    text-align: center;
+    color: #615F5F;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 45.2px;
+
+}
+
+.meditationtab3-tips{
+    background: #FFFFFF;
+    width: 785px;
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 45.2px;
+    text-align: left;
+
+}
+
+.meditationtab3-tips h3{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.meditationtab3-tips ol li{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 16px;
+    margin-bottom: 12px;
+}

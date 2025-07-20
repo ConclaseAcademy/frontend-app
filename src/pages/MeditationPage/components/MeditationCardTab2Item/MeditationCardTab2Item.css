@@ -1,0 +1,89 @@
+.meditationcardtab2item-container{
+    border-radius: 16px;
+    border-width: 1px;
+    padding: 16px;
+    background: #FFFFFF;
+    border: 1px solid #6A6A6A66;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    /* align-items: center; */
+    height: 443px;
+
+}
+
+.meditationcardtab2item-container h4{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    text-align: center;
+    color: #080D17;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.meditationcardtab2item-desc{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    text-align: center;
+    color: #4D4C4C;
+    margin: 0px;
+    padding: 0px;
+}
+
+.meditationcardtab2item-author{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 15px;
+    text-align: center;
+    color: #4D4C4C;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 16px;
+
+}
+
+.meditationcardtab2item-time{
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18px;
+    text-align: center;
+    color: #4D4C4C;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 13px;
+    column-gap: 16px;
+
+}
+
+.meditationcardtab2item-time p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.meditationcardtab2item-span{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meditationcardtab2item-span p{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px;
+    padding: 11.5px 17px;
+    background: #ACABABD6;
+    font-weight: 600;
+    /* font-style: SemiBold; */
+}

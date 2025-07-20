@@ -1,0 +1,141 @@
+
+.outer-frame {
+  width: 1440px;
+  height: 1024px;
+  top: -1724px;
+  left: -19407px;
+  background: #1E3B6E;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-frame {
+  width: 933px;
+  height: 1021px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-block {
+  width: 574px;
+  height: 84px;
+  align-items: center ;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  margin-left: 186px;
+}
+.header-block h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color:#213B6C
+  
+;
+}
+.header-block .subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  color: #8F8C81;
+}
+
+
+.question-prompt {
+  width: 553px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 0 0 0 53px;
+}
+.question-prompt h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #080D17;
+  margin: 0;
+}
+.question-prompt .explain {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8F8C81;
+  margin: 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 53px;
+}
+
+.option-card {
+  width: 806px;
+  height: 130px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 30px 35px;
+  border: 2px solid #949596;
+  border-radius: 16px;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+.option-card .icon {
+  font-size: 24px;
+  line-height: 1;
+}
+.option-card .text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.option-card strong {
+  font-size: 18px;
+  color: #080D17;
+}
+.option-card small {
+  font-size: 14px;
+  color: #646464;
+}
+
+.cta {
+  display: flex;
+  justify-content: right;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+#getStartedBtn {
+  width: 184px;
+  height: 56px;
+  padding: 12px 24px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  background: #1A3467;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+#getStartedBtn .arrow {
+  font-size: 18px;
+  line-height: 1;
+  color: #FFFFFF;
+}

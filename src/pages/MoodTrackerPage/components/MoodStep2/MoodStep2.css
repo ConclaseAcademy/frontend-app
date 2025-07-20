@@ -1,0 +1,85 @@
+.moodstep2-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 99px;
+    /* background-color: red; */
+}
+
+.moodstep2-container h1{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 32px;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .moodstep2-calendar{
+    border: 0px;
+} */
+
+.react-calendar{
+    border: none !important;
+    width: 458px;
+}
+
+div.react-calendar__navigation > button > span{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.react-calendar__tile {
+    /* color: #000000; */
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+/* background: #000000; */
+    width: 62px;
+    height: 58px;
+
+}
+
+.react-calendar__month-view__days__day--weekend{
+    color: inherit;
+}
+
+.react-calendar__tile--active {
+    background: #9FBAE2;
+    color: #1A3467;
+    border-radius: 50%;
+
+}
+
+.react-calendar__tile--now{
+    background-color: transparent;
+}
+
+.react-calendar__month-view__weekdays__weekday{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr{
+    text-decoration: none;
+}
+
+.moodstep2-container p{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 17px;
+    text-align: center;
+    color: #797171;
+    width: 350px;
+    margin-top: 50px;
+
+}

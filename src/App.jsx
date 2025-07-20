@@ -8,7 +8,12 @@ import ProfilePage from './pages/ProfilePage/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
 import ReminderPage from './pages/ReminderPage/ReminderPage';
 import DeletePage from './pages/DeleteAccount/DeleteAccount';
+import MeditationPage from './pages/MeditationPage/MeditationPage';
 import JournalPage from './pages/JournalPage/JournalPage';
+import MainDashboard from './pages/DashboardPage/components/MainDashboard/MainDashboard';
+import MoodTrackerPage from './pages/MoodTrackerPage/MoodTrackerPage';
+import GetStartedPage from './pages/getstartedpage/getstartedpage';
+import GetStartedPage2 from './pages/getstartedpage/getstartedpage2';
 
 
 function App() {
@@ -29,20 +34,34 @@ function App() {
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/entry" element={<EntryPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="dashboard" element={<DashboardPage />} >
+            <Route index element={<MainDashboard />} />
+            <Route path='mood' element={<MoodTrackerPage />} />
+          </Route>
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/privacy-settings" element={<PrivacyPage />} />
           <Route path="/reminder" element={<ReminderPage />} />
           <Route path="/delete-account" element={<DeletePage />} />
+          <Route path="/meditation" element={<MeditationPage />} />
           <Route path="/journal" element ={<JournalPage/>}/>
+          <Route path="/getstarted" element ={<GetStartedPage/>}/>
+          <Route path="/getstarted2" element ={<GetStartedPage2/>}/>
         </Routes>
 
     
-        <div style={{ position: 'fixed', bottom: '20px', left: '10px', display: 'flex', gap: '20px' }}>
+        <div 
+        style={{ position: 'fixed', bottom: '20px', 
+        left: '10px', display: 'flex', padding:'20px',
+        gap: '20px', background:'whitesmoke' }}>
           <NavLink to="/signin">Sign In Page</NavLink>
           <NavLink to="/signup">Sign Up Page</NavLink>
           <NavLink to="/dashboard">Dashboard Page</NavLink>
-          <NavLink to="/journal">Journal Entry Page</NavLink>
+          <NavLink to="/journal">Journal Page</NavLink>
+          <NavLink to="/entry">Entry Page</NavLink>
+          <NavLink to="/profile">Profile Page</NavLink>
+          <NavLink to="/meditation">Meditation Page</NavLink>
+          <NavLink to="/getstarted">GetStarted Page</NavLink>
+          <NavLink to="/getstarted2">GetStarted 2 Page</NavLink>
         </div>
     </>
   );

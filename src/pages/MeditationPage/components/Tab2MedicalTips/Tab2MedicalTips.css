@@ -1,0 +1,35 @@
+.tab2medicaltips-container{
+    border-radius: 16px;
+    padding: 24px;
+    background: #FFFFFF;
+    margin-top: 57px;
+    width: 785px;
+}
+
+.tab2medicaltips-container div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.tab2medicaltips-container div img{
+    width: 30px;
+    height: 30px;
+}
+
+.tab2medicaltips-container div h3{
+    font-weight: 600;
+    /* font-style: SemiBold; */
+    font-size: 24px;
+    color: #080D17;
+
+}
+
+.tab2medicaltips-container ul li{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 16px;
+    margin-bottom: 12px;
+
+}

@@ -7,14 +7,62 @@ import GoogleImgSrc from "./assets/google.svg";
 import { formInputControlData } from "./SignUpPageFormData";
 import Linebreak from "./components/Linebreak";
 import signUpImgSrc from "./assets/signup.svg";
+import { useState } from "react";
+import axios from "axios";
 
 
 export default function SignUpPage(){
     const navigate = useNavigate();
+
+    // the state
+    const [formData, setFormData] = useState({
+        name:'',
+        email:'',
+        password:''
+    });
+
+    // handlers
+    function onChangeHandler(e){
+        const {name, value} = e.target;
+        const newState = {...formData, [name]:value};
+        setFormData(newState);
+    }
+
+    function onSubmitHandler(e){
+        e.preventDefault();
+        const data = {};
+        const fullName = formData.name.split(" ");
+        const firstName = fullName[0];
+        const lastName = fullName[1];
+        data.firstName = firstName;
+        data.lastName = lastName;
+        data.emailAddress = formData.email;
+        data.password = formData.password;
+        // data.role = "SuperAdmin"
+        console.log("what data: ", data)
+
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com'
+
+        // console.log("What I submitted: ", data);
+        // console.log("What I submitted: ", typeof fullName, firstName, lastName);
+        // axios.post('http://135.119.224.168:8000/api/v1/Authentication/register?role=SuperAdmin',
+        axios.post('/api/v1/Authentication/register?role=SuperAdmin',
+        // axios.post(proxyUrl + 'http://135.119.224.168:8000/api/v1/Authentication/register?role=SuperAdmin',
+            data, {
+            headers:{
+                "Accept":"*/*",
+                "Content-Type":'application/json'
+            }
+        }).then((res) => {
+            console.log("Response: ", res)
+        }).catch((err) => {
+            console.log("The Error: ", err)
+        })
+    }
+
     return <div className="signuppage-container">
         <div className="signuppage-left">
             <div className="signuppage-logo">
-            {/* <div style={{marginLeft:'-50px', marginBottom:'97px'}}> */}
                 <Logo />
             </div>
             <div className="signuppage-card-1">
@@ -45,10 +93,16 @@ export default function SignUpPage(){
 
 
 
-            <form>            
+            <form onSubmit={onSubmitHandler}>            
                 <Linebreak />
                 {formInputControlData.map(formcontrol => {
-                    return <InputControl style={{background: "#0000000D"}} key={formcontrol.id} {...formcontrol} />
+                    return <InputControl 
+                    style={{background: "#0000000D"}} 
+                    key={formcontrol.id} 
+                    {...formcontrol} 
+                    onChange={onChangeHandler}
+                    value={formData[formcontrol.name]}
+                    />
                 })}
                 <Button 
                     style={{
