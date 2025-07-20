@@ -2,8 +2,10 @@ import { FiHome } from "react-icons/fi";
 import "./Middlesection.css";
 import { FaSearch } from "react-icons/fa";
 import { BiCloudDownload, BiPlus } from "react-icons/bi";
+import { useNavigate } from "react-router";
 
 export default function MiddleSection() {
+  const navigate = useNavigate()
   return (
     <>
       <div className="middle-wrapper">
@@ -15,7 +17,7 @@ export default function MiddleSection() {
             <button className="cloud-btn">
               <BiCloudDownload className="cloud" />
             </button>
-            <button className="entry-btn">
+            <button onClick = {() => navigate("/entry")} className="entry-btn">
               <BiPlus className="cloud-circle" />
               New Entry
             </button>
