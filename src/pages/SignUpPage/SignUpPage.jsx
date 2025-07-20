@@ -11,11 +11,16 @@ import signUpImgSrc from "./assets/signup.svg";
 import { useRef, useState } from "react";
 import axios from "axios";
 import Loader from "../../components/Loader/Loader";
+import { loginData } from "../../store/modalstore";
 
 
 export default function SignUpPage(){
     const formRef = useRef(null);
     const navigate = useNavigate();
+    
+    // getting the slice of the state
+    const newToken = loginData((state)=>state.updateToken);
+    const newRole = loginData((state)=>state.updateRole);
 
     // the state
     const [formData, setFormData] = useState({
@@ -46,16 +51,40 @@ export default function SignUpPage(){
         }
 
         if(formData.name == ""){
+            const name = formRef.current?.['name'];
             newErr.name = "Name can't be Empty!";
+            name.focus()
             isValid = false;
-        }else if(formData.email == ""){
+        }else if(!/^[A-Za-z]+ [A-Za-z]+$/.test(formData.name)){
+            const name = formRef.current?.['name'];
+            newErr.name = "Name is invalid 'John Doe'";
+            name.focus()
+            isValid = false;
+        } else if(formData.email == ""){
+            const email = formRef.current?.['email'];
             newErr.email = "Email can't be Empty!";
+            email.focus()
             isValid = false;
-        } else if(formData.password == ""){
+        } else if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)){
+            const email = formRef.current?.['email'];
+            newErr.email = "Enter a valid email!";
+            email.focus()
+            isValid = false;
+        }else if(formData.password == ""){
+            const password = formRef.current?.['password'];
             newErr.password = "Password can't be Empty!";
+            password.focus()
             isValid = false;
+        } else if(formData.password.length < 6){
+            const password = formRef.current?.['password'];
+            newErr.password = "Password must be more than 6!";
+            password.focus()
+            isValid = false;
+
         } else if(!formData.term){
+            const term = formRef.current?.['term'];
             newErr.term = "You must agree to the terms and conditions!"
+            term.focus()
             isValid = false;
         }
         setError(newErr);
@@ -97,13 +126,36 @@ export default function SignUpPage(){
         }).then((res) => {
             if(res.status == 200){
                 toast.success("Registration successful!");
-                setTimeout(() => {
-                    navigate('/signin')
-                }, 3000)
+
+                    // login after registration
+                    return axios.post('http://135.119.224.168:8000/api/v1/Authentication',
+                            {
+                                email:data.emailAddress,
+                                password:data.password
+                            }, {
+                            headers:{
+                                "Accept":"*/*",
+                                "Content-Type":'application/json'
+                            }
+                        }).then((res) => {
+                            if(res.status == 200){
+                                toast.success("Loging User in!");
+                                // save it in the store
+                                console.log("Login Success: ", res.data.data)
+                                newRole(res.data.data.role)
+                                newToken(res.data.data.token)
+                                setTimeout(() => {
+                                    navigate('/dashboard')
+                                }, 3000)
+                            }
+                    }).catch((err) => {
+                        console.log("The Error: ", err)
+                        toast.error(err.message || "Registration failed.");
+                    });
             }
         }).catch((err) => {
             console.log("The Error: ", err)
-            toast.error(err.message || "Registration failed.");
+            toast.error(err?.response?.data?.message || err.message || "Registration failed.");
         }).finally(() => {
             setLoader(false)
         })

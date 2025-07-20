@@ -9,7 +9,7 @@ export const formInputControlData = [
     {
         id:1,
         label:"Email Address",
-        type:"email",
+        type:"text",
         placeholder:"Enter your email",
         name:'email'
     },

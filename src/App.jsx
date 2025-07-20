@@ -68,6 +68,7 @@ function App() {
         right: '10px', display: 'flex', padding:'20px',
         flexDirection:'column',
         gap: '20px', background:'whitesmoke' }}>
+          <NavLink to="/">Landing Page</NavLink>
           <NavLink to="/signin">Sign In Page</NavLink>
           <NavLink to="/signup">Sign Up Page</NavLink>
           <NavLink to="/dashboard">Dashboard Page</NavLink>
