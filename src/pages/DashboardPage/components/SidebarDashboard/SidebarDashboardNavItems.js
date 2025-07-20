@@ -10,7 +10,7 @@ export const SidebarNavItem = [
     {
         id:2,
         navlink:'Journal',
-        link:'/entry'
+        link:'/journal'
     },
     {
         id:3,

@@ -21,7 +21,7 @@ export default function MainEntry(){
     // getting the slice of the state in toogling the sidebar
     const sidebarstate = useStore((state) => state.sidebarnav);
     const toggleSideBarNav = useStore((state) => state.sideBarNav);
-
+console.log("state",sidebarstate)
     // closing the popup when clicked on anywhere in the document
     useEffect(() => {
         document.addEventListener('click', (e) => {        
@@ -42,6 +42,7 @@ export default function MainEntry(){
             <div className="mainentry-icon">
                 <RippleEffect>
                     <img src={MenuSrc} height={40}
+                    
                     onClick={() => {toggleSideBarNav()}}
                     width={40} alt="menu" />
                 </RippleEffect>

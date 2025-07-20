@@ -8,6 +8,7 @@
   margin: auto 50px;
   justify-content: space-around;
   align-items: center;
+
 }
 .item-select {
   padding: 4px 12px;
@@ -110,4 +111,33 @@ select {
 input::placeholder,
 select::placeholder {
   font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header{
+    display: flex;
+    flex-direction: column;
+ align-items:center;
+ justify-content: center;
+  }
+  .header > h1{
+    width: 100%;
+  }
+.info{
+ text-align: center;
+ display: inline;
+}
+
+.wrapper-items {
+ 
+  overflow-x:auto;
+}
+}
+
+@media only screen and (max-width: 1230px) {
+
+.wrapper-items {
+ 
+  overflow-x:auto;
+}
 }
