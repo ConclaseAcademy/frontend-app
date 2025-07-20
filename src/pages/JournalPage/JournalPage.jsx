@@ -5,7 +5,8 @@ import SharePopUp from "../EntryPage/components/SharePopUp/SharePopUp";
 import SidebarEntry from "../EntryPage/components/SidebarEntry/SidebarEntry";
 // import "./components/MainjournalPage.css";
 // import "../EntryPage/EntryPage";
-import MainjournalPage from "./components/Mainjournalpage";
+// import MainjournalPage from "./components/Mainjournalpage";
+import MainjournalPage from "./components/MainjournalPage";
 
 export default function JournalPage() {
   const logoutPopState = useStore((state) => state.logoutpopup);
