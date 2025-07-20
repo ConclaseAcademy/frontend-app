@@ -3,8 +3,8 @@ import DeleteEntryPopUp from "../EntryPage/components/DeleteEntryPopUp/DeleteEnt
 import LogOutPopUp from "../EntryPage/components/LogOutPopUp/LogOutPopUp";
 import SharePopUp from "../EntryPage/components/SharePopUp/SharePopUp";
 import SidebarEntry from "../EntryPage/components/SidebarEntry/SidebarEntry";
-import "./components/MainjournalPage.css";
-import "../EntryPage/EntryPage";
+// import "./components/MainjournalPage.css";
+// import "../EntryPage/EntryPage";
 import MainjournalPage from "./components/Mainjournalpage";
 
 export default function JournalPage() {
